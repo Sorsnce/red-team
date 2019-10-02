@@ -14,11 +14,11 @@ Python >= 3.6
 Metasploit >= 5.0.46
 ```
 
-### Custom payloads
+### Categories for red-team exploits/payloads
+* [BashBunny](https://github.com/Sorsnce/red-team/tree/master/BashBunny)
+* [Metasploit](https://github.com/Sorsnce/red-team/tree/master/Metasploit)
+* [Interview Questions](https://github.com/Sorsnce/red-team/tree/master/RedTeam-Interview)
 
-The following list is exploits/payloads that I have developed or use on a regular basis.
-* 24465.rb
-* BlueTeamPCAudit
 
 ## Built With
 
@@ -27,4 +27,4 @@ The following list is exploits/payloads that I have developed or use on a regula
 
 ## Authors
 
-* **Trae Horton** - *Initial work* - [exploits](https://github.com/sorsnce/exploits)
+* **Trae Horton** - *Initial work* - [exploits](https://github.com/Sorsnce/red-team)
