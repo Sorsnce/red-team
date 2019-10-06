@@ -1,0 +1,11 @@
+# framework
+pyyaml
+dnspython
+lxml
+mechanize
+requests
+# web
+flask
+dicttoxml
+XlsxWriter
+unicodecsv
