@@ -18,7 +18,7 @@ Metasploit >= 5.0.46
 * [BashBunny](https://github.com/Sorsnce/red-team/tree/master/BashBunny)
 * [Metasploit](https://github.com/Sorsnce/red-team/tree/master/Metasploit)
 * [Interview Questions](https://github.com/Sorsnce/red-team/tree/master/RedTeam-Interview)
-
+* [recon-ng](https://github.com/Sorsnce/red-team/tree/master/recon-ng)
 
 ## Built With
 
