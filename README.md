@@ -20,6 +20,9 @@ Metasploit >= 5.0.46
 * [Interview Questions](https://github.com/Sorsnce/red-team/tree/master/RedTeam-Interview)
 * [recon-ng](https://github.com/Sorsnce/red-team/tree/master/recon-ng)
 
+### Class and Certification info
+* [CEH](https://github.com/Sorsnce/red-team/tree/master/HackerHalted)
+
 ## Built With
 
 * [Metasploit](https://www.metasploit.com/) - Metasploit
