@@ -135,3 +135,17 @@ $ sudo service postgresql status
 $ sudo msfdb status
 $ sudo msfconsole
 ```
+
+# responder
+
+# arpspoof
+
+# bettercap
+
+# SEtoolkit
+
+# dnsspoof
+
+# wifite
+
+# aircrack-ng
