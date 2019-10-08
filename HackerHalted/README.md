@@ -1,6 +1,6 @@
 # Certified Ethical Hacker v10
 
-## recon-ng
+# recon-ng
 Available default commands that recon-ng will use.
 ```
 [recon-ng][default] > help
@@ -83,9 +83,21 @@ SUMMARY
 [recon-ng][calvary][hackertarget] > 
 
 ```
-## maltego
 
-## nmap
+Using modules within recon-ng
+```
+[recon-ng][calvary] > modules search
+
+  Recon
+  -----
+    recon/domains-contacts/whois_pocs
+    recon/domains-hosts/hackertarget
+
+[recon-ng][calvary] > 
+```
+# maltego
+
+# nmap
 Make sure you remember and understand the following nmap flags for the CEH:
 ```
 -sS = TCP SYN/Connect Scan
@@ -94,16 +106,30 @@ Make sure you remember and understand the following nmap flags for the CEH:
 ```
 $ nmap -sS 192.168.1.0/24
 ```
+# netdiscover
+```
+$ sudo netdiscover
 
-## hping
+Currently scanning: 172.16.34.0/16   |   Screen View: Unique Hosts                                                                         
+19 Captured ARP Req/Rep packets, from 3 hosts.   Total size: 1140                                                                          
+_____________________________________________________________________________
+  IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+-----------------------------------------------------------------------------
+192.168.8.1     00:50:56:c0:00:08     17    1020  VMware, Inc.                                                                             
+192.168.8.2     00:50:56:fa:26:a6      1      60  VMware, Inc.                                                                             
+192.168.8.254   00:50:56:f5:a3:c3      1      60  VMware, Inc.                                                                           
 
-## hydro
+```
 
-## cherrytree
+# hping
 
-## foca
+# hydro
 
-## metasploit
+# cherrytree
+
+# foca
+
+# metasploit
 ```
 $ sudo service postgresql status
 $ sudo msfdb status
