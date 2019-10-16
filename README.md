@@ -19,6 +19,7 @@ Metasploit >= 5.0.46
 * [Metasploit](https://github.com/Sorsnce/red-team/tree/master/Metasploit)
 * [Interview Questions](https://github.com/Sorsnce/red-team/tree/master/RedTeam-Interview)
 * [recon-ng](https://github.com/Sorsnce/red-team/tree/master/recon-ng)
+* [nmap](https://github.com/Sorsnce/red-team/tree/master/nmap)
 
 ### Class and Certification info
 * [CEH](https://github.com/Sorsnce/red-team/tree/master/HackerHalted)
