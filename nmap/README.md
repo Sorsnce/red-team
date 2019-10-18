@@ -1,4 +1,10 @@
-# Nmap Cheat Sheet
+## Running Via Docker
+```
+sudo docker login docker.pkg.github.com -u USERNAME -p TOKEN
+sudo docker run -ti docker.pkg.github.com/sorsnce/red-team/nmap:1.0
+```
+
+## Nmap Cheat Sheet
 
 The following is a list of .nse scrips and cheat sheets for nmap
 ```
