@@ -1,5 +1,6 @@
 *.gem
 *.rbc
+*.lua
 /.config
 /coverage/
 /InstalledFiles
