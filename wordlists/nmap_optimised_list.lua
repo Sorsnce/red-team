@@ -8,6 +8,10 @@ table.insert(fingerprints, {
 {path='/index/',method = 'HEAD'},
 {path='/images/',method = 'HEAD'},
 {path='/download/',method = 'HEAD'},
+{path='/css/',method = 'HEAD'},
+{path='/manual/',method = 'HEAD'},
+{path='/fonts/',method = 'HEAD'},
+{path='/moodle/',method = 'HEAD'},
 },
     matches = {
       {
