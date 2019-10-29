@@ -1,6 +1,6 @@
 *.gem
 *.rbc
-*.lua
+/wordlists/directory-list-2.3-medium.lua
 /.config
 /coverage/
 /InstalledFiles
