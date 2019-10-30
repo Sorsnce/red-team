@@ -1,7 +1,6 @@
 *.gem
 *.rbc
-!/wordlists/directory-list-2.3-medium.lua
-!/wordlists/nmap_optimised_list.lua
+wordlists/
 /.config
 /coverage/
 /InstalledFiles
