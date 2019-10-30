@@ -1,3 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+wordlists/
+/wordlists
+/wordlists/
 wordlists/directory-list-2.3-medium.lua
