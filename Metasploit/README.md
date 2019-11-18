@@ -1,9 +1,0 @@
-# Metasploit
-
-The following directory contains all exploits/payloads associated with Metasploit
-
-#### Running Via Docker
-```
-sudo docker login docker.pkg.github.com -u USERNAME -p TOKEN
-sudo docker run -ti docker.pkg.github.com/sorsnce/red-team/metasploit-framework:1.0
-```
