@@ -1,11 +1,7 @@
 GET /autodiscover/autodiscover.json/v1.0/389703@pilottravelcenters.com?Protocol=Autodiscoverv1 HTTP/1.1
-
 User-Agent: Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.12026; Pro)
-
 Accept-Encoding: gzip, deflate
-
 Accept: application/json
-
 Connection: close
-
 Host: autodiscover-s.outlook.com
+
