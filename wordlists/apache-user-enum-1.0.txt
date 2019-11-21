@@ -1,6 +1,6 @@
 # apache-user-enum-1.0.txt
 #
-# Copyright 2007 James Fisher
+# Copyright 2007 Trae Horton
 #
 # This work is licensed under the Creative Commons 
 # Attribution-Share Alike 3.0 License. To view a copy of this 
@@ -58,6 +58,7 @@
 ~user3
 ~user4
 ~user5
+~user6
 ~sql
 ~data
 ~database
