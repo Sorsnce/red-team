@@ -11,13 +11,41 @@ Present this ticket at the factory gates at six thirty in the evening of the rst
 
 (Signed) Willy Wonka
 
+
 ## Objective: WW - A Golden Ticket 
 
 **Q1 - I GOT A GOLDEN TICKET**
 
-**A1 - contestwinner**
+What user account are you automatically logged into in the provided virtual machine?
 
+
+**A1 - 'contestwinner'**
 ```
 contestwinner@oompa-loompa:~$  whoami
 contestwinner
+```
+
+
+**Q2 - DOOMPADEE DOO**
+
+What's the host name of your workstation?
+
+
+**A2 - 'oompa-loompa'**
+```
+contestwinner@oompa-loompa:~$ hostname
+oompa-loompa
+```
+
+
+**Q3 - AN ODD PATH**
+
+When a user enters a command into a Windows command prompt or a Linux terminal, the operating system checks for commands and programs of that name in the environment “path” . The $PATH / %PATH% variable tells the OS where to look for the command entered.
+Your system has something odd in its path. What is it?
+
+
+**A3 - oompa-loompa**
+```
+contestwinner@oompa-loompa:~$ hostname
+oompa-loompa
 ```
