@@ -148,3 +148,143 @@ ee6f375b65ddd1c3d1076026b2995d125ae1a7d86b1a580aa8dfe7ba7bb51b35  ticket5.gif
 contestwinner@oompa-loompa:~/tickets$ 
 
 ```
+
+
+
+
+## Objective: WW - Chocolate Room
+The challenges in this room center around the
+/home/contestwinner/chocolateroom/ folder.
+
+
+**Q1 - PLUMBING CHECK**
+
+Just like pipes hauling chocolate out of our river, you can redirect the standard output of a command to the standard input of another. For example, if you 
+want BEAUTIFUL le listings, try ls -l | lolcat to see what happens! You can also direct output to a le by typing something like ls -l >
+/tmp/listing.txt . This will write your directory listing to a le in /tmp/ instead of showing it in your terminal. How can you have both?
+
+Specically, which command will append the output of ls -l to /tmp/listing.txt AND print it to the terminal (standard out)?
+
+* ls -l >> tail -f /tmp/listing.txt
+* ls -l >> type -w /tmp/listing.txt
+* ls -l | tee -a /tmp/listing.txt
+* ls -l | top /tmp/listing.txt
+
+**A1 - 'ls -l | tee -a /tmp/listing.txt'**
+```
+contestwinner@oompa-loompa:~/chocolateroom$ ls -l | tee -a /tmp/listing.txt
+total 5368
+drwxr-xr-x  2 contestwinner contestwinner    4096 Nov  6 16:37 buttercups
+-rw-r--r--  1 contestwinner contestwinner    1497 Nov  6 16:37 effluent.bak
+-rw-r--r--  1 root          root             1497 Nov  6 16:37 effluent.txt
+-rwxr-xr-x  1 root          root          5435088 Nov  6 16:37 filter
+drwxr-xr-x 12 contestwinner contestwinner    4096 Nov  6 16:37 row90
+drwxr-xr-x 12 contestwinner contestwinner    4096 Nov  6 16:37 row91
+drwxr-xr-x 12 contestwinner contestwinner    4096 Nov  6 16:37 row92
+drwxr-xr-x 12 contestwinner contestwinner    4096 Nov  6 16:37 row93
+drwxr-xr-x 12 contestwinner contestwinner    4096 Nov  6 16:37 row94
+drwxr-xr-x 12 contestwinner contestwinner    4096 Nov  6 16:37 row95
+drwxr-xr-x 12 contestwinner contestwinner    4096 Nov  6 16:37 row96
+drwxr-xr-x 12 contestwinner contestwinner    4096 Nov  6 16:37 row97
+drwxr-xr-x 12 contestwinner contestwinner    4096 Nov  6 16:37 row98
+drwxr-xr-x 12 contestwinner contestwinner    4096 Nov  6 16:37 row99
+-rw-r--r--  1 contestwinner contestwinner      57 Nov  6 16:37 scoring.json
+-rw-rw-r--  1 contestwinner contestwinner       0 Jan  3 14:33 type
+-rw-r--r--  1 contestwinner contestwinner      80 Nov  6 16:37 wonkatania.enc
+contestwinner@oompa-loompa:~/chocolateroom$ 
+
+```
+________________________________________________________________________________________________________________________________________
+
+**Q2 - MY LITTLE -BUTTERCUP**
+
+Oh, there’s a buttercup ower that’s gone bad. Please rename the one in $HOME/chocolateroom/buttercups/ with a - in the le name to match the others. Once you're done, please run $ ./bc-sniff in that folder to get the ag we've tucked away for you!
+
+
+**A2 - 'NetWars{YouCanEatAlmostEverything}'**
+```
+contestwinner@oompa-loompa:~/chocolateroom/buttercups$ mv ./-buttercup5.txt buttercup5.txt
+contestwinner@oompa-loompa:~/chocolateroom/buttercups$ ./bc-sniff 
+Yes yes - THANK you!
+NetWars{YouCanEatAlmostEverything}
+contestwinner@oompa-loompa:~/chocolateroom/buttercups$ 
+
+```
+________________________________________________________________________________________________________________________________________
+
+**Q3 - ONE LIVE LOLLY**
+
+One of these lollipops is actually a lever that turns some of the pipes on and off or whatever. Can you find which lollipop in your 
+$HOME/chocolateroom/ folder tree is an executable program?
+
+
+**A3 - 'lollipop99-44'**
+```
+contestwinner@oompa-loompa:~/chocolateroom$ find $HOME/chocolateroom/ -exec file {} \; | grep ELF
+/home/contestwinner/chocolateroom/row99/column44/lollipop99-44: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 2.6.32, BuildID[sha1]=d3bc3a83e6b748869189ea2b5eb6e4541cc45d99, not stripped
+/home/contestwinner/chocolateroom/buttercups/bc-sniff: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 2.6.32, BuildID[sha1]=28ba79c778f7402713aec6af319ee0fbaf3a8014, stripped
+/home/contestwinner/chocolateroom/filter: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 2.6.32, BuildID[sha1]=28ba79c778f7402713aec6af319ee0fbaf3a8014, stripped
+
+contestwinner@oompa-loompa:~/chocolateroom/row99/column44$ ./lollipop99-44 
+One hundred percent pure!
+contestwinner@oompa-loompa:~/chocolateroom/row99/column44$ 
+```
+________________________________________________________________________________________________________________________________________
+
+**Q4 - HHC FAN DETECTED**
+
+It seems someone used your terminal to do a bit of Android app reversing. What’s the name of the file they examined?
+
+
+**A4 - 'SantaGram_4.2.apk'**
+```
+contestwinner@oompa-loompa:~/chocolateroom/row99/column44$ history | grep ".apk"
+   35  ncat 172.26.85.45 41370 > SantaGram_4.2.apk
+   36  apktool -d SantaGram_4.2.apk
+  194  grep *.apk
+  196  history | grep "apk"
+  769  history | grep ".apk"
+contestwinner@oompa-loompa:~/chocolateroom/row99/column44$ 
+
+```
+________________________________________________________________________________________________________________________________________
+
+**Q5 - GLOOP IN THE RIVER**
+
+Parts of the factory can operate with command line redirectors. For example, the lter that looks for gloop-y substances in the chocolate
+river can be tested at the terminal; there’s a version of it in the ~/chocolateroom/ folder. If you cat effluent.txt and redirect its 
+output to ./filter , it’ll give you 100+ lines of output. Some of the lines will show as dropped by the lter. What’s wrong with those 
+lines?
+
+What type of attack do lines 10, 20, 30, etc. in effluent.txt resemble?
+* DNS cache poisoning
+* SQL injection
+* Twitter handle injection
+* command injection
+* input bounds poisoning
+
+**A5 - 'SQL injection'**
+```
+contestwinner@oompa-loompa:~/chocolateroom$ cat effluent.txt 
+anisotropy
+@tkh16
+willy wonka blu-ray
+wrt54g
+Whangdoodles
+Hornswogglers
+Snozzwangers
+' rotten Vermicious Knids '
+banana
+' UNION SELECT 1,2,user(),4,5; --
+quote "I hope you enjoy it.  I think you will."
+123456789
+iloveyou
+princess
+@iagox86
+rockyou
+Mrs. Teavee
+monkey
+lynnie!
+' UNION SELECT 1,2,user(),4,5; --
+
+```
