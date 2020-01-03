@@ -101,3 +101,50 @@ installed package has been modified. What's the sha1sum of the maliciously inser
 contestwinner@oompa-loompa:~$
 
 ```
+________________________________________________________________________________________________________________________________________
+**Q8 - EXPRESS YOURSELF, REGULARLY**
+
+Regular expressions can be powerful tools in everything from sed to perl to powershell . Which of these regular expressions would match these whole strings:
+
+* Fickelgruber is 2 smelly
+* Prodnose is not number 1 in our books
+* Slugworth is more lame than 87 percent of society
+
+but not these:
+
+* Willy knows 1000000 things
+* Charlie is worth over 1000 dollars or pounds
+* Tom and Jerry started in the 1940s
+
+Choose one of the folloing:
+* ``` (\d|\d\d) ```
+* ``` *is.* ```
+* ``` [A-Za-z\s]+\d+[a-z\s]* ```
+* ``` [\D]+\d{1,2}[a-z ]+ ```
+
+**A8 - '``` [\D]+\d{1,2}[a-z ]+ ```'**
+
+________________________________________________________________________________________________________________________________________
+**Q9 - NOT ALL THAT GLITTERS**
+
+Five Golden Tickets were found, and they’re in the tickets subdirectory of your home folder! But wait - one of them is SLIGHTLY 
+different… Which one isthe fake?
+
+* ticket1.gif
+* ticket2.gif
+* ticket3.gif
+* ticket4.gif
+* ticket5.gif
+
+
+**A9 - 'ticket5.gif'**
+```
+contestwinner@oompa-loompa:~/tickets$ sha256sum *
+d1e4bfb0686e6b550245e9a58418ec2c4a4db1cd06f5dc86455d94f60a1b99f5  ticket1.gif
+d1e4bfb0686e6b550245e9a58418ec2c4a4db1cd06f5dc86455d94f60a1b99f5  ticket2.gif
+d1e4bfb0686e6b550245e9a58418ec2c4a4db1cd06f5dc86455d94f60a1b99f5  ticket3.gif
+d1e4bfb0686e6b550245e9a58418ec2c4a4db1cd06f5dc86455d94f60a1b99f5  ticket4.gif
+ee6f375b65ddd1c3d1076026b2995d125ae1a7d86b1a580aa8dfe7ba7bb51b35  ticket5.gif
+contestwinner@oompa-loompa:~/tickets$ 
+
+```
