@@ -288,3 +288,36 @@ lynnie!
 ' UNION SELECT 1,2,user(),4,5; --
 
 ```
+________________________________________________________________________________________________________________________________________
+
+**Q5.1 - FILTER PRACTICE**
+
+Here in our factory, we have a WWAF - Wonka Web Application Firewall! It works similarly to other modern WAF technologies. We use JSON 
+rule sets to filter out good input with positive values from bad input using negative values. For example:
+```
+{
+ "\\d":-50,
+ "[a-z]":1
+}
+```
+These rules would filter out lines with digits while keeping lines with lowercase alpha characters.
+
+Let's practice by creating a JSON rule set le named my-rules.json that will allow every line through that doesn't have an @ symbol.
+
+Then run ./filter -r my-rules.json < effluent.txt and (if correct) submit the hash provided.
+
+Note: ./filter -h will show you lter options
+
+**A5.1 - ''**
+```
+contestwinner@oompa-loompa:~/chocolateroom$ cp scoring.json my-rules.json
+contestwinner@oompa-loompa:~/chocolateroom$ nano my-rules.json
+
+{
+  "'1'='1'"|"1=1":-50,
+  "[a-zA-Z]":1,
+  "\\w{5}":5
+}
+
+```
+
