@@ -355,3 +355,24 @@ What are the first six characters in the file?
 contestwinner@oompa-loompa:~/chocolateroom$ 
 
 ```
+________________________________________________________________________________________________________________________________________
+
+**Q6.1 - SWEET INITIALIZATION VECTORS!**
+
+If you add -p or -P to the prior openssl command, you'll notice certain values are output:
+
+* **Salt**: A pseudo-random value that makes brute force decryption more difcult.
+* **Key**: The secret, shared value that is used to encrypt and decrypt the message.
+* **IV**: Ciphers like AES-CBC uses a rolling encryption scheme. You can think of an **initialization vector** as the starting point in that roll
+
+``` openssl ``` creates a pseudo-random **salt** each time it's run. The **key** and **IV** are derived from the password the user supplies. 
+If you run the command multiple times, the values change because of the **salt**.
+
+If you tell openssl not to use a **salt**, what **IV** comes with the password ``` Nice children ``` ? Give your answer as a string of 32 hexadecimal characters.
+
+
+**A6.1 - ''**
+```
+contestwinner@oompa-loompa:~/chocolateroom$ 
+
+```
