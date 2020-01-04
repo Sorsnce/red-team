@@ -376,3 +376,18 @@ If you tell openssl not to use a **salt**, what **IV** comes with the password `
 contestwinner@oompa-loompa:~/chocolateroom$ 
 
 ```
+________________________________________________________________________________________________________________________________________
+
+**Q6.2 - THE WONKATANIA**
+
+We have a special way of summoning the Wonkatania when we want to oat down the chocolate river. The instructions are encrypted 
+and sitting in the ``` chocolateroom ``` folder. We used **aes-256-cbc, didn’t use any padding or salt**, and the encryption 
+passphrase is ``` Pure Imagination ```. It could be accomplished with **openssl** or any one of many scripting languages.
+
+Decrypt this le and submit a SHA-1 sum of its contents.
+
+**A6.2 - ''**
+```
+contestwinner@oompa-loompa:~/chocolateroom$ 
+
+```
