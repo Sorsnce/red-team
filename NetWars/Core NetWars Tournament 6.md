@@ -321,3 +321,37 @@ contestwinner@oompa-loompa:~/chocolateroom$ nano my-rules.json
 
 ```
 
+________________________________________________________________________________________________________________________________________
+
+**Q5.2 - FILTER THE GLOOP**
+
+That filter we have on the chocolate river does a great job keeping junk out and letting good stuff in - when it’s congured correctly.
+For example, effluent.txt has some valid strings in it, but every 10th line needs to be ltered out. (You're kidding! What a crazy, 
+pseudo-random happenstance!) Using scoring.json as an example, congure your own rule set of 10 rules or fewer to block those bad lines 
+- and nothing else
+
+Once you’ve achieved this, what’s the SHA1 hash of the filtered output? This hash will be printed to the console by filter .
+
+Hint: You can test your regular expressions using sites such as https://regex101.com/ (https://regex101.com/).
+
+**A5.2 - ''**
+```
+contestwinner@oompa-loompa:~/chocolateroom$ 
+
+```
+
+________________________________________________________________________________________________________________________________________
+
+**Q6 - ON ENCRYPTION**
+
+As you surely have gathered, secrecy is something we take quite seriously here! As such, it is important that you understand some of 
+the essentials of cryptography. Let's start with some AES encryption.
+
+Use openssl enc -aes-256-cbc to encrypt anything. Then look at the contents with xxd or hexdump -C . 
+What are the first six characters in the file?
+
+**A6 - ''**
+```
+contestwinner@oompa-loompa:~/chocolateroom$ 
+
+```
