@@ -411,11 +411,24 @@ host or VM, feel free to use PowerShell or Event Viewer to analyze the evidence.
 
 First, please examine the file and let us know how many events were captured.
 
-**A1 - ''**
+**A1 - '38'**
 ```
-contestwinner@oompa-loompa:~/inventingroom$ 
-contestwinner@oompa-loompa:~/inventingroom$ 
+Copy the loginlog.evtx from the VM to your Windows Host
+Open loginlog.evtx from the Windows Host
+Count how many events were captured in loginlog.evtx
+```
+________________________________________________________________________________________________________________________________________
 
+**Q1.1 - SPLITTING WOOD**
+
+Please, analyze the log le and let us know which account was successfully leveraged to access the server! Time for a password reset...
+
+
+**A1.1 - 'joe'**
+```
+Open loginlog.evtx from the Windows Host
+If you have the Colum "Task Category" visible we want to search for a Logoff event
+The event before the only Logoff event should be an event for a Logon using "joe" with impersonation Level of "Impersonation"
 ```
 ________________________________________________________________________________________________________________________________________
 
