@@ -1,6 +1,6 @@
 # Core NetWars Tournament 6
 
-### GOLDEN TICKET :star:
+### GOLDEN TICKET
 
 #### Greetings to you , the lucky finder of this golden ticket, from Mr. Willy Wonka!
 I shake you warmly by the hand! Tremendous things are in store for you! Many wonderful surprises await you! For now, I do invite you to come to my factory and be my guest for two evenings - you and all others who are lucky enough to nd my Golden Tickets. I, Willy Wonka, will conduct you around the factory myself, showing you everything that there is to see.
@@ -12,7 +12,7 @@ Present this ticket at the factory gates at six thirty in the evening of the rst
 (Signed) Willy Wonka
 
 
-## Objective: WW - A Golden Ticket 
+## Objective: WW - A Golden Ticket :star:
 
 **Q1 - I GOT A GOLDEN TICKET**
 
