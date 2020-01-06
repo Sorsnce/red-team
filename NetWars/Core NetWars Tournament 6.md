@@ -1,6 +1,6 @@
 # Core NetWars Tournament 6
 
-### GOLDEN TICKET
+### GOLDEN TICKET :star:
 
 #### Greetings to you , the lucky finder of this golden ticket, from Mr. Willy Wonka!
 I shake you warmly by the hand! Tremendous things are in store for you! Many wonderful surprises await you! For now, I do invite you to come to my factory and be my guest for two evenings - you and all others who are lucky enough to nd my Golden Tickets. I, Willy Wonka, will conduct you around the factory myself, showing you everything that there is to see.
@@ -152,7 +152,7 @@ contestwinner@oompa-loompa:~/tickets$
 
 
 
-## Objective: WW - Chocolate Room
+## Objective: WW - Chocolate Room :star:
 The challenges in this room center around the
 /home/contestwinner/chocolateroom/ folder.
 
@@ -391,3 +391,31 @@ Decrypt this le and submit a SHA-1 sum of its contents.
 contestwinner@oompa-loompa:~/chocolateroom$ 
 
 ```
+## Objective: WW - Inventing Room :star:
+You have now come to the most interesting and, at the same time, the most secret room of my factory. Ladies and Gentlemen, 
+The Inventing Room. Now remember, no messing about. No touching, no tasting, no telling.
+
+You may be interested in trying our new Vegetable Gum. Oh no, it's not what you think. It tastes like ordinary chewing gum, 
+but it smells like cauliower and asparagus to anybody else. This way, if you chew a piece after dinner, your parents will 
+think you ate your vegetables!
+
+The challenges in this room center around the
+/home/contestwinner/inventingroom/ folder.
+
+
+**Q1 - LIFTING WOOD**
+
+It seems that a rogue system on our network was attempting to access SMB shares on the mail server. We're concerned that the activity 
+may have been successful. You can use ```evtx_dump.py``` to parse the ```.evtx``` file into XML. Alternately, if you have a Windows 
+host or VM, feel free to use PowerShell or Event Viewer to analyze the evidence.
+
+First, please examine the file and let us know how many events were captured.
+
+**A1 - ''**
+```
+contestwinner@oompa-loompa:~/inventingroom$ 
+contestwinner@oompa-loompa:~/inventingroom$ 
+
+```
+________________________________________________________________________________________________________________________________________
+
