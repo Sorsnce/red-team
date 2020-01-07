@@ -432,3 +432,22 @@ The event before the only Logoff event should be an event for a Logon using "joe
 ```
 ________________________________________________________________________________________________________________________________________
 
+**Q2 - LOST KEY**
+
+There's an encrypted ```note.enc``` in $HOME/inventingroom , but we've lost the key. Here's what we remember:
+
+* We used a null IV ('\x00')
+* The encryption key was 32 bytes long, and the last 30 bytes of it were null ( \x00 )
+* It was encrypted with aes-256-cbc, no salt, no PKCS7 padding
+* The lowercase string stop was in the original message
+
+The answer should be a string of characters, starting with a capital letter, and ending with punctuation.
+
+What was the original message in ```note.enc``` ?
+
+**A1 - ''**
+```
+
+```
+________________________________________________________________________________________________________________________________________
+
