@@ -451,3 +451,23 @@ What was the original message in ```note.enc``` ?
 ```
 ________________________________________________________________________________________________________________________________________
 
+**Q2 - EVERLASTING CONFIG FILE**
+
+The prototype Everlasting Gobstopper Machine is currently turned off - and has been since that candy was moved to the general production 
+line. Just to see if it works, please edit its config and try to start it up. Oh, just to warn you, it might be picky about the time 
+stamp on that config file.
+
+Adjust ```gs-config.txt``` to turn the machine on, and make sure its timestamp is before noon on 30 June, 1971.
+
+**A1 - 'NetWars{VeryLittlePocketMoney}'**
+```
+contestwinner@oompa-loompa:~/inventingroom$ touch -t 7006301105 gs-config.txt
+contestwinner@oompa-loompa:~/inventingroom$ ./gobstopper 
+Attempting to turn machine ON
+gs-config.txt modified time is 15591900.0
+If you don't speak epoch, that's 1970-06-30 11:05:00
+Machine on! 
+NetWars{VeryLittlePocketMoney}
+contestwinner@oompa-loompa:~/inventingroom$
+```
+________________________________________________________________________________________________________________________________________
