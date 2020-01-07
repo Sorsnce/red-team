@@ -427,7 +427,7 @@ Please, analyze the log le and let us know which account was successfully levera
 **A1.1 - 'joe'**
 ```
 Open loginlog.evtx from the Windows Host
-If you have the Colum "Task Category" visible we want to search for a Logoff event
+If you have the Column "Task Category" visible we want to search for a Logoff event
 The event before the only Logoff event should be an event for a Logon using "joe" with impersonation Level of "Impersonation"
 ```
 ________________________________________________________________________________________________________________________________________
