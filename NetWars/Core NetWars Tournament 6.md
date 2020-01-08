@@ -445,13 +445,13 @@ The answer should be a string of characters, starting with a capital letter, and
 
 What was the original message in ```note.enc``` ?
 
-**A1 - ''**
+**A2 - ''**
 ```
 
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q2 - EVERLASTING CONFIG FILE**
+**Q3 - EVERLASTING CONFIG FILE**
 
 The prototype Everlasting Gobstopper Machine is currently turned off - and has been since that candy was moved to the general production 
 line. Just to see if it works, please edit its config and try to start it up. Oh, just to warn you, it might be picky about the time 
@@ -459,7 +459,7 @@ stamp on that config file.
 
 Adjust ```gs-config.txt``` to turn the machine on, and make sure its timestamp is before noon on 30 June, 1971.
 
-**A1 - 'NetWars{VeryLittlePocketMoney}'**
+**A3 - 'NetWars{VeryLittlePocketMoney}'**
 ```
 contestwinner@oompa-loompa:~/inventingroom$ touch -t 7006301105 gs-config.txt
 contestwinner@oompa-loompa:~/inventingroom$ ./gobstopper 
