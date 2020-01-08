@@ -471,3 +471,20 @@ NetWars{VeryLittlePocketMoney}
 contestwinner@oompa-loompa:~/inventingroom$
 ```
 ________________________________________________________________________________________________________________________________________
+
+**Q4 - BY GUM, IT'S GUM!**
+
+I've dropped parts of a flag into the Dinner Gum machine. Can you examine bygumitsgum and find the original string?
+
+**A4 - 'NetWars{ItHappensEveryTimeTheyAllBecomeBlueberries}'**
+```
+contestwinner@oompa-loompa:~/inventingroom$ base64 -d bygumitsgum > output.zip
+Now exchange the output.zip multiple times using 7zip untill you get a file named "message.txt"
+contestwinner@oompa-loompa:~/inventingroom$ cat message.txt
+JTRlJTY1JTc0JTU3JTYxJTcyJTczJTdiJTQ5JTc0JTQ4JTYxJTcwJTcwJTY1JTZlJTczJTQ1JTc2JTY1JTcyJTc5JTU0JTY5JTZkJTY1JTU0JTY4JTY1JTc5JTQxJTZjJTZjJTQyJTY1JTYzJTZmJTZkJTY1JTQyJTZjJTc1JTY1JTYyJTY1JTcyJTcyJTY5JTY1JTczJTdk
+
+Now use Burp Suite to decode in this order
+Decode as Base64 > Decode as URL
+NetWars{ItHappensEveryTimeTheyAllBecomeBlueberries}
+```
+________________________________________________________________________________________________________________________________________
