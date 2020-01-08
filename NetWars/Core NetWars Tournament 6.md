@@ -478,8 +478,14 @@ I've dropped parts of a flag into the Dinner Gum machine. Can you examine bygumi
 
 **A4 - 'NetWars{ItHappensEveryTimeTheyAllBecomeBlueberries}'**
 ```
-contestwinner@oompa-loompa:~/inventingroom$ base64 -d bygumitsgum > output.zip
-Now exchange the output.zip multiple times using 7zip untill you get a file named "message.txt"
+contestwinner@oompa-loompa:~/inventingroom$ base64 -d bygumitsgum > output
+contestwinner@oompa-loompa:~/inventingroom$ file output
+output: gzip compressed data, last modified: Wed Jan 23 14:53:19 2019, from Unix
+contestwinner@oompa-loompa:~/inventingroom$ 
+
+Now that we know "output" is a compressed file we will use 7zip to extract the data 
+mulitple times until you get a file named "message.txt"
+
 contestwinner@oompa-loompa:~/inventingroom$ cat message.txt
 JTRlJTY1JTc0JTU3JTYxJTcyJTczJTdiJTQ5JTc0JTQ4JTYxJTcwJTcwJTY1JTZlJTczJTQ1JTc2JTY1JTcyJTc5JTU0JTY5JTZkJTY1JTU0JTY4JTY1JTc5JTQxJTZjJTZjJTQyJTY1JTYzJTZmJTZkJTY1JTQyJTZjJTc1JTY1JTYyJTY1JTcyJTcyJTY5JTY1JTczJTdk
 
