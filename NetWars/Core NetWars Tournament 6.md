@@ -521,3 +521,27 @@ root@oompa-loompa:~/inventingroom#
 
 ```
 ________________________________________________________________________________________________________________________________________
+**Q6 - FIXING A HOLE**
+
+There's a hole in the lickable - I mean uncomplicated - rewall, and we're concerned about our snozzberries!
+
+With UID 0 privileges (as root), please use ```ufw``` to fix the hole - delete the rule that allows TCP/50413 in. Once it's patched up, 
+look in /root/ for the flag we'll drop.
+
+**A5 - 'NetWars{ItTastesLikeSnozzberries}'**
+```
+root@oompa-loompa:/root# sudo ufw delete allow 50413/tcp
+
+```
+________________________________________________________________________________________________________________________________________
+
+## Objective: WW - Fizzy Lifting Drink Room :star: :star:
+Something very unusual in here. Bubbles, bubbles everywhere, but not a drop to drink. Yet.
+
+There are our Fizzy Lifting Drinks. They fill you with gas, and the gas is so terrically lifting that it lifts you right off the 
+ground like a balloon. But I daren't sell it yet. It's still too powerful.
+
+Come along now; don't hang about. You're going to be wild about this next room.
+
+The challenges in this room center around the
+/home/contestwinner/fizzyliftingdrinkroom/ folder.
