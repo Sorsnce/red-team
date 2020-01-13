@@ -545,3 +545,30 @@ Come along now; don't hang about. You're going to be wild about this next room.
 
 The challenges in this room center around the
 /home/contestwinner/fizzyliftingdrinkroom/ folder.
+
+________________________________________________________________________________________________________________________________________
+**Q1 - STRANGE ROOM**
+
+For some reason, this room reminds me of the windows in my dentist's ofce. Maybe it's the smell...
+
+As root , run **/home/contestwinner/fizzyliftingdrinkroom/enter.sh** to proceed.
+
+What directory do you start in? Answer in the form of /folder
+
+**A1 - '/home'**
+```
+root@oompa-loompa:~/inventingroom# /home/contestwinner/fizzyliftingdrinkroom/enter.sh
+PowerShell 6.2.3
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+https://aka.ms/pscore6-docs
+Type 'help' to get help.
+
+PS /home> pwd
+
+Path
+----
+/home
+
+PS /home> 
+```
