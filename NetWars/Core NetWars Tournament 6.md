@@ -594,3 +594,19 @@ PS /home/pswinner> cat ./WarningLabel.txt
 NetWars{ItsStillTooPowerful}
 PS /home/pswinner> 
 ```
+________________________________________________________________________________________________________________________________________
+**Q3 - I SAW THE SIGN**
+
+As long as we're reading things, what's the value of the WallSign environment variable?
+
+**A3 - 'NetWars{Obelus}'**
+```
+PS /home/pswinner> Get-ChildItem Env:WallSign           
+
+Name                           Value
+----                           -----
+WallSign                       NetWars{Obelus}
+
+PS /home/pswinner> 
+
+```
