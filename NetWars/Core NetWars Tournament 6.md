@@ -572,3 +572,25 @@ Path
 
 PS /home> 
 ```
+________________________________________________________________________________________________________________________________________
+**Q2 - WARNING LABEL**
+
+Let's cd into the pswinner directory. What message is on the warning label?
+
+**A2 - 'NetWars{ItsStillTooPowerful}'**
+```
+PS /home> cd ./pswinner/
+PS /home/pswinner> dir
+
+
+    Directory: /home/pswinner
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+--r---           11/6/19  4:38 PM           2978 FizzyLiftingDrink.ps1
+------           11/6/19  4:39 PM             30 WarningLabel.txt
+
+PS /home/pswinner> cat ./WarningLabel.txt
+NetWars{ItsStillTooPowerful}
+PS /home/pswinner> 
+```
