@@ -46,12 +46,13 @@ msf exploit > run
 ### Linux
 First steps to go from low-privilege user to root on a linux box.
 ```
-joanna@openadmin:~$ sudo -l                                                                                          
-Matching Defaults entries for joanna on openadmin:                                                                       
-  env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin 
+joanna@openadmin:~$ sudo -l                     
+Matching Defaults entries for joanna on openadmin:                              
+  env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\
+  :/bin\:/snap/bin 
   
-User joanna may run the following commands on openadmin:                                                                 
-  (ALL) NOPASSWD: /bin/nano /opt/priv                                                                              
+User joanna may run the following commands on openadmin:                         
+  (ALL) NOPASSWD: /bin/nano /opt/priv                                 
   joanna@openadmin:~$ 
 ```
 Look at what the user can sudo and try to escalation from their. 
