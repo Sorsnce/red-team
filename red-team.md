@@ -108,6 +108,8 @@ sudo apt-get install pandoc
 ```
 - LaTeX (eg. [TeX Live](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz)) in order to get `pdflatex` or `xelatex`
 ```
+wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+tar -xzf install-tl-unx.tar.gz
 cd /your/unpacked/directory
 perl install-tl  # install-tl-windows on Windows
 [... messages omitted ...]
