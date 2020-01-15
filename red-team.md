@@ -122,6 +122,11 @@ PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 ```
 - [Eisvogel Pandoc LaTeX PDF Template](https://github.com/Wandmalfarbe/pandoc-latex-template#installation)
 ```
+wget https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/eisvogel.tex
+mkdir -p ~/.pandoc/templates
+mv eisvogel.tex ~/.pandoc/templates/default.latex
+```
+```
 pandoc PENTEST_REPORT.md \
 -o OSCP-OS-XXXXX-Lab-Report.pdf \
 --from markdown+yaml_metadata_block+raw_html \
