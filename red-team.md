@@ -106,7 +106,18 @@ msf > set payload windows/meterpreter/reverse_tcp
 ```
 sudo apt-get install pandoc
 ```
-- LaTeX (eg. [TeX Live](http://www.tug.org/texlive/)) in order to get `pdflatex` or `xelatex`
+- LaTeX (eg. [TeX Live](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz)) in order to get `pdflatex` or `xelatex`
+```
+cd /your/unpacked/directory
+perl install-tl  # install-tl-windows on Windows
+[... messages omitted ...]
+Enter command: i
+[... when done, see below for post-install ...]
+```
+Post-install: setting PATH variable
+```
+PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
+```
 - [Eisvogel Pandoc LaTeX PDF Template](https://github.com/Wandmalfarbe/pandoc-latex-template#installation)
 ```
 pandoc PENTEST_REPORT.md \
