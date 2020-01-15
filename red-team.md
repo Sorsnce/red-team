@@ -44,6 +44,7 @@ msf exploit > set SESSION 1
 msf exploit > run
 ```
 ### Linux
+- [GTFOBins](https://gtfobins.github.io/) is a fantastic resource for priviledge escolation within Linux.
 First steps to go from low-privilege user to root on a linux box.
 ```
 joanna@openadmin:~$ sudo -l                     
