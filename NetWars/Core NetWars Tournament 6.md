@@ -651,6 +651,7 @@ Which of these options will add three numbers to $sum ?
 
 **A5 - '(99,44,100) | %{$sum += $_}'**
 ```
+PS /home/pswinner> $sum = 1..255
 PS /home/pswinner> (99,44,100) | %{$sum += $_}
 PS /home/pswinner> $sum
 ....
