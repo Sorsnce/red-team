@@ -610,3 +610,29 @@ WallSign                       NetWars{Obelus}
 PS /home/pswinner> 
 
 ```
+________________________________________________________________________________________________________________________________________
+**Q4 - COUNTING**
+
+In PowerShell, there's an easy way to generate a range of numbers. How could you generate a list of numbers from 1 to 255?
+
+* (1...256)
+* 1..255
+* New-Range -Start 1 -End 255
+* range(1,256)
+
+
+**A4 - '1..255'**
+```
+PS /home/pswinner> 1..255
+1
+2
+3
+4
+5
+6
+7
+8
+9
+etc....
+PS /home/pswinner> 
+```
