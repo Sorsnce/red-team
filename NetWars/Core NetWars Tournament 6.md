@@ -636,3 +636,31 @@ PS /home/pswinner> 1..255
 etc....
 PS /home/pswinner> 
 ```
+________________________________________________________________________________________________________________________________________
+**Q5 - ITERATION**
+
+In PowerShell, we can iterate over a list of items (like in the previous question) to use each as a component of another command. 
+For example, if we want to add a few numbers to an existing variable, we can use `ForEach-Object` to do so in a one-liner.
+
+Which of these options will add three numbers to $sum ?
+
+* (99,44,100) => $sum)
+* (99,44,100) | %{$sum += $_}
+* (99,44,100) | @($sum += i)
+* (99,44,100)::$sum -Add
+
+**A5 - '(99,44,100) | %{$sum += $_}'**
+```
+PS /home/pswinner> (99,44,100) | %{$sum += $_}
+PS /home/pswinner> $sum
+....
+251
+252
+253
+254
+255
+99
+44
+100
+PS /home/pswinner>
+```
