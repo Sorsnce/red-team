@@ -30,6 +30,11 @@ $ vi /etc/hosts
 127.0.0.2         kali
 10.10.10.123      www.example.com
 ```
+# Cracking
+Before we run any hashes through John the Ripper or Hash cat, lets check if anyone has cracked these hashes before.
+- [HashKiller](https://hashkiller.co.uk/cracker)
+
+
 # Privilege Escalation
 
 ### Windows
