@@ -710,3 +710,11 @@ PS /usr/lib/apt> ./Burp.ps1
 NetWars{FromNowOnWeKeepOurFeetOnTheGround}
 PS /usr/lib/apt> 
 ```
+________________________________________________________________________________________________________________________________________
+
+## Objective: WW - Egg Sorting Room :star: :star:
+This is our Egg Sorting Room. You'll see we have quadruple-sized geese laying octuple-sized eggs! What's that you say? Nuts? 
+No, I'm afraid you have this confused with another universe.
+
+The challenges in this room center around the
+`/home/contestwinner/eggsortingroom/` folder.
