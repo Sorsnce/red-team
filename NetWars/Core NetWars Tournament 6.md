@@ -1,3 +1,20 @@
+---
+title: "Offensive Security"
+author: ["sorsnce@protonmail.com", "OSID: 1337"]
+date: "2020-01-13"
+subject: "Markdown"
+keywords: [Markdown, Example]
+subtitle: "PWK Lab & OSCP Exam"
+lang: "en"
+titlepage: true
+titlepage-color: "78051c"
+titlepage-text-color: "FFFAFA"
+titlepage-rule-color: "FFFAFA"
+titlepage-rule-height: 2
+book: true
+classoption: oneside
+code-block-font-size: \scriptsize
+---
 # Core NetWars Tournament 6
 
 ### GOLDEN TICKET
