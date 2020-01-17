@@ -665,3 +665,21 @@ PS /home/pswinner> $sum
 100
 PS /home/pswinner>
 ```
+________________________________________________________________________________________________________________________________________
+**Q6 - OPENING THE FLD CABINET**
+
+Interesting! There's a cabinet labeled "FLD" with an odd lock on it. It's a dial marked "Passcode" with the numbers 0 through 99 on it.
+Let's try every valid value of Passcode as an input to the cabinet.
+
+What ag does FizzyLiftingDrink.ps1 return when fed the right Passcode?
+
+
+**A6 - 'NetWars{IFeelTerriblyStrange}'**
+```
+PS /home/pswinner> 1..99 | ForEach-Object $_ {./FizzyLiftingDrink.ps1 -Passcode $_}
+Sorry, this isn't the passcode we're looking for.
+Sorry, this isn't the passcode we're looking for.
+Sorry, this isn't the passcode we're looking for.
+Encrypted is: IbcWPikedCHp/PHxorkGz0BByK9hEUKzXeruTwcOT3A=
+Decrypted is: NetWars{IFeelTerriblyStrange}
+```
