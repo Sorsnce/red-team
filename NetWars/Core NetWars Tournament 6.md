@@ -1,10 +1,10 @@
 ---
-title: "Offensive Security"
-author: ["sorsnce@protonmail.com", "OSID: 1337"]
-date: "2020-01-13"
+title: "NetWars Core"
+author: ["Trae Horton", "CEH", "GWAPT"]
+date: "2020-01-17"
 subject: "Markdown"
 keywords: [Markdown, Example]
-subtitle: "PWK Lab & OSCP Exam"
+subtitle: "Tournament 6"
 lang: "en"
 titlepage: true
 titlepage-color: "78051c"
@@ -29,39 +29,39 @@ Present this ticket at the factory gates at six thirty in the evening of the rst
 (Signed) Willy Wonka
 
 
-## Objective: WW - A Golden Ticket :star:
+# Objective: WW - A Golden Ticket :star:
 
-**Q1 - I GOT A GOLDEN TICKET**
+## **Q1 - I GOT A GOLDEN TICKET**
 
 What user account are you automatically logged into in the provided virtual machine?
 
 
-**A1 - 'contestwinner'**
+### **A1 - 'contestwinner'**
 ```
 contestwinner@oompa-loompa:~$  whoami
 contestwinner
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q2 - DOOMPADEE DOO**
+## **Q2 - DOOMPADEE DOO**
 
 What's the host name of your workstation?
 
 
-**A2 - 'oompa-loompa'**
+### **A2 - 'oompa-loompa'**
 ```
 contestwinner@oompa-loompa:~$ hostname
 oompa-loompa
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q3 - AN ODD PATH**
+## **Q3 - AN ODD PATH**
 
 When a user enters a command into a Windows command prompt or a Linux terminal, the operating system checks for commands and programs of that name in the environment “path” . The $PATH / %PATH% variable tells the OS where to look for the command entered.
 Your system has something odd in its path. What is it?
 
 
-**A3 - '/usr/bin/wonkafactory'**
+### **A3 - '/usr/bin/wonkafactory'**
 ```
 contestwinner@oompa-loompa:~$ echo $PATH
 /home/contestwinner/.rvm/gems/ruby-2.4.6/bin:/home/contestwinner/.rvm/gems/ruby-2.4.6@global/bin:
@@ -70,26 +70,26 @@ contestwinner@oompa-loompa:~$ echo $PATH
 /snap/bin:/pentest/exploitation/burp/:/usr/bin/wonkafactory/:/usr/share/rvm/bin
 ```
 ________________________________________________________________________________________________________________________________________
-**Q4 - IMPROVED!**
+## **Q4 - IMPROVED!**
 
 What version of VI IMproved is available on your workstation? 
 
 Please answer in the form **`\<major version>.\<minor version>`**, eg **1.2**
 
 
-**A4 - '7.4'**
+### **A4 - '7.4'**
 ```
 contestwinner@oompa-loompa:~$ vim --version
 VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jun 07 2019 15:35:43)
 ```
 ________________________________________________________________________________________________________________________________________
-**Q5 - EDIBLE SIT-ABLES**
+## **Q5 - EDIBLE SIT-ABLES**
 
 Whose toadstool is that? in your user's home directory (/home/contestwinner/), 
 there is a text file called toadstool.txt. Which user is able to write to this file?
 
 
-**A5 - 'mike'**
+### **A5 - 'mike'**
 ```
 contestwinner@oompa-loompa:~$ ls -l
 -r--rw----  1 contestwinner teavee               62 Nov  6 16:37 toadstool.txt
@@ -97,29 +97,29 @@ contestwinner@oompa-loompa:~$ cat /etc/group | grep teavee
 teavee:x:1006:mike
 ```
 ________________________________________________________________________________________________________________________________________
-**Q6 - LOOMPA DAY**
+## **Q6 - LOOMPA DAY**
 
 When was your Oompa Loompa born? That is, on what date was your default shell/command line/terminal last modified?
 Answer with a date in the format YYYYMMDD
 
-**A6 - '20190314'**
+### **A6 - '20190314'**
 ```
 contestwinner@oompa-loompa:~$ ls -l /bin/bash
 -rwxr-xr-x 1 root root 1037528 Mar 14  2019 /bin/bash
 ```
 ________________________________________________________________________________________________________________________________________
-**Q7 - CLASSY CHOCOLATE**
+## **Q7 - CLASSY CHOCOLATE**
 
 Someone is trying to sull the name of our chocolate! Inside your Oompa Loompa workstation, an image file as part of an
 installed package has been modified. What's the sha1sum of the maliciously inserted file?
 
-**A7 - ''**
+### **A7 - ''**
 ```
 contestwinner@oompa-loompa:~$
 
 ```
 ________________________________________________________________________________________________________________________________________
-**Q8 - EXPRESS YOURSELF, REGULARLY**
+## **Q8 - EXPRESS YOURSELF, REGULARLY**
 
 Regular expressions can be powerful tools in everything from sed to perl to powershell . Which of these regular expressions would match these whole strings:
 
@@ -140,10 +140,10 @@ Choose one of the following:
 * ` [A-Za-z\s]+\d+[a-z\s]* `
 * ` [\D]+\d{1,2}[a-z ]+ `
 
-**A8 - '` [\D]+\d{1,2}[a-z ]+ `'**
+### **A8 - '` [\D]+\d{1,2}[a-z ]+ `'**
 
 ________________________________________________________________________________________________________________________________________
-**Q9 - NOT ALL THAT GLITTERS**
+## **Q9 - NOT ALL THAT GLITTERS**
 
 Five Golden Tickets were found, and they’re in the tickets subdirectory of your home folder! But wait - one of them is SLIGHTLY 
 different… Which one isthe fake?
@@ -155,7 +155,7 @@ different… Which one isthe fake?
 * ticket5.gif
 
 
-**A9 - 'ticket5.gif'**
+### **A9 - 'ticket5.gif'**
 ```
 contestwinner@oompa-loompa:~/tickets$ sha256sum *
 d1e4bfb0686e6b550245e9a58418ec2c4a4db1cd06f5dc86455d94f60a1b99f5  ticket1.gif
@@ -170,12 +170,12 @@ contestwinner@oompa-loompa:~/tickets$
 
 
 
-## Objective: WW - Chocolate Room :star:
+# Objective: WW - Chocolate Room :star:
 The challenges in this room center around the
 /home/contestwinner/chocolateroom/ folder.
 
 
-**Q1 - PLUMBING CHECK**
+## **Q1 - PLUMBING CHECK**
 
 Just like pipes hauling chocolate out of our river, you can redirect the standard output of a command to the standard input of another. For example, if you 
 want BEAUTIFUL le listings, try ls -l | lolcat to see what happens! You can also direct output to a le by typing something like ls -l >
@@ -188,7 +188,7 @@ Specically, which command will append the output of ls -l to /tmp/listing.txt AN
 * ls -l | tee -a /tmp/listing.txt
 * ls -l | top /tmp/listing.txt
 
-**A1 - 'ls -l | tee -a /tmp/listing.txt'**
+### **A1 - 'ls -l | tee -a /tmp/listing.txt'**
 ```
 contestwinner@oompa-loompa:~/chocolateroom$ ls -l | tee -a /tmp/listing.txt
 total 5368
@@ -214,12 +214,12 @@ contestwinner@oompa-loompa:~/chocolateroom$
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q2 - MY LITTLE -BUTTERCUP**
+## **Q2 - MY LITTLE -BUTTERCUP**
 
 Oh, there’s a buttercup ower that’s gone bad. Please rename the one in $HOME/chocolateroom/buttercups/ with a - in the le name to match the others. Once you're done, please run $ ./bc-sniff in that folder to get the ag we've tucked away for you!
 
 
-**A2 - 'NetWars{YouCanEatAlmostEverything}'**
+### **A2 - 'NetWars{YouCanEatAlmostEverything}'**
 ```
 contestwinner@oompa-loompa:~/chocolateroom/buttercups$ mv ./-buttercup5.txt buttercup5.txt
 contestwinner@oompa-loompa:~/chocolateroom/buttercups$ ./bc-sniff 
@@ -230,13 +230,13 @@ contestwinner@oompa-loompa:~/chocolateroom/buttercups$
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q3 - ONE LIVE LOLLY**
+## **Q3 - ONE LIVE LOLLY**
 
 One of these lollipops is actually a lever that turns some of the pipes on and off or whatever. Can you find which lollipop in your 
 $HOME/chocolateroom/ folder tree is an executable program?
 
 
-**A3 - 'lollipop99-44'**
+### **A3 - 'lollipop99-44'**
 ```
 contestwinner@oompa-loompa:~/chocolateroom$ find $HOME/chocolateroom/ -exec file {} \; | grep ELF
 /home/contestwinner/chocolateroom/row99/column44/lollipop99-44: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 2.6.32, BuildID[sha1]=d3bc3a83e6b748869189ea2b5eb6e4541cc45d99, not stripped
@@ -249,12 +249,12 @@ contestwinner@oompa-loompa:~/chocolateroom/row99/column44$
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q4 - HHC FAN DETECTED**
+## **Q4 - HHC FAN DETECTED**
 
 It seems someone used your terminal to do a bit of Android app reversing. What’s the name of the file they examined?
 
 
-**A4 - 'SantaGram_4.2.apk'**
+### **A4 - 'SantaGram_4.2.apk'**
 ```
 contestwinner@oompa-loompa:~/chocolateroom/row99/column44$ history | grep ".apk"
    35  ncat 172.26.85.45 41370 > SantaGram_4.2.apk
@@ -267,7 +267,7 @@ contestwinner@oompa-loompa:~/chocolateroom/row99/column44$
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q5 - GLOOP IN THE RIVER**
+## **Q5 - GLOOP IN THE RIVER**
 
 Parts of the factory can operate with command line redirectors. For example, the lter that looks for gloop-y substances in the chocolate
 river can be tested at the terminal; there’s a version of it in the ~/chocolateroom/ folder. If you cat effluent.txt and redirect its 
@@ -281,7 +281,7 @@ What type of attack do lines 10, 20, 30, etc. in effluent.txt resemble?
 * command injection
 * input bounds poisoning
 
-**A5 - 'SQL injection'**
+### **A5 - 'SQL injection'**
 ```
 contestwinner@oompa-loompa:~/chocolateroom$ cat effluent.txt 
 anisotropy
@@ -308,7 +308,7 @@ lynnie!
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q5.1 - FILTER PRACTICE**
+## **Q5.1 - FILTER PRACTICE**
 
 Here in our factory, we have a WWAF - Wonka Web Application Firewall! It works similarly to other modern WAF technologies. We use JSON 
 rule sets to filter out good input with positive values from bad input using negative values. For example:
@@ -326,7 +326,7 @@ Then run ./filter -r my-rules.json < effluent.txt and (if correct) submit the ha
 
 Note: ./filter -h will show you lter options
 
-**A5.1 - ''**
+### **A5.1 - ''**
 ```
 contestwinner@oompa-loompa:~/chocolateroom$ cp scoring.json my-rules.json
 contestwinner@oompa-loompa:~/chocolateroom$ nano my-rules.json
@@ -341,7 +341,7 @@ contestwinner@oompa-loompa:~/chocolateroom$ nano my-rules.json
 
 ________________________________________________________________________________________________________________________________________
 
-**Q5.2 - FILTER THE GLOOP**
+## **Q5.2 - FILTER THE GLOOP**
 
 That filter we have on the chocolate river does a great job keeping junk out and letting good stuff in - when it’s congured correctly.
 For example, effluent.txt has some valid strings in it, but every 10th line needs to be ltered out. (You're kidding! What a crazy, 
@@ -352,7 +352,7 @@ Once you’ve achieved this, what’s the SHA1 hash of the filtered output? This
 
 Hint: You can test your regular expressions using sites such as https://regex101.com/ (https://regex101.com/).
 
-**A5.2 - ''**
+### **A5.2 - ''**
 ```
 contestwinner@oompa-loompa:~/chocolateroom$ 
 
@@ -360,7 +360,7 @@ contestwinner@oompa-loompa:~/chocolateroom$
 
 ________________________________________________________________________________________________________________________________________
 
-**Q6 - ON ENCRYPTION**
+## **Q6 - ON ENCRYPTION**
 
 As you surely have gathered, secrecy is something we take quite seriously here! As such, it is important that you understand some of 
 the essentials of cryptography. Let's start with some AES encryption.
@@ -368,14 +368,14 @@ the essentials of cryptography. Let's start with some AES encryption.
 Use openssl enc -aes-256-cbc to encrypt anything. Then look at the contents with xxd or hexdump -C . 
 What are the first six characters in the file?
 
-**A6 - ''**
+### **A6 - ''**
 ```
 contestwinner@oompa-loompa:~/chocolateroom$ 
 
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q6.1 - SWEET INITIALIZATION VECTORS!**
+## **Q6.1 - SWEET INITIALIZATION VECTORS!**
 
 If you add -p or -P to the prior openssl command, you'll notice certain values are output:
 
@@ -389,14 +389,14 @@ If you run the command multiple times, the values change because of the **salt**
 If you tell openssl not to use a **salt**, what **IV** comes with the password ``` Nice children ``` ? Give your answer as a string of 32 hexadecimal characters.
 
 
-**A6.1 - ''**
+### **A6.1 - ''**
 ```
 contestwinner@oompa-loompa:~/chocolateroom$ 
 
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q6.2 - THE WONKATANIA**
+## **Q6.2 - THE WONKATANIA**
 
 We have a special way of summoning the Wonkatania when we want to oat down the chocolate river. The instructions are encrypted 
 and sitting in the ``` chocolateroom ``` folder. We used **aes-256-cbc, didn’t use any padding or salt**, and the encryption 
@@ -404,12 +404,12 @@ passphrase is ``` Pure Imagination ```. It could be accomplished with **openssl*
 
 Decrypt this le and submit a SHA-1 sum of its contents.
 
-**A6.2 - ''**
+### **A6.2 - ''**
 ```
 contestwinner@oompa-loompa:~/chocolateroom$ 
 
 ```
-## Objective: WW - Inventing Room :star:
+# Objective: WW - Inventing Room :star:
 You have now come to the most interesting and, at the same time, the most secret room of my factory. Ladies and Gentlemen, 
 The Inventing Room. Now remember, no messing about. No touching, no tasting, no telling.
 
@@ -421,7 +421,7 @@ The challenges in this room center around the
 /home/contestwinner/inventingroom/ folder.
 
 
-**Q1 - LIFTING WOOD**
+## **Q1 - LIFTING WOOD**
 
 It seems that a rogue system on our network was attempting to access SMB shares on the mail server. We're concerned that the activity 
 may have been successful. You can use ```evtx_dump.py``` to parse the ```.evtx``` file into XML. Alternately, if you have a Windows 
@@ -429,7 +429,7 @@ host or VM, feel free to use PowerShell or Event Viewer to analyze the evidence.
 
 First, please examine the file and let us know how many events were captured.
 
-**A1 - '38'**
+### **A1 - '38'**
 ```
 Copy the loginlog.evtx from the VM to your Windows Host
 Open loginlog.evtx from the Windows Host
@@ -437,12 +437,12 @@ Count how many events were captured in loginlog.evtx
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q1.1 - SPLITTING WOOD**
+## **Q1.1 - SPLITTING WOOD**
 
 Please, analyze the log le and let us know which account was successfully leveraged to access the server! Time for a password reset...
 
 
-**A1.1 - 'joe'**
+### **A1.1 - 'joe'**
 ```
 Open loginlog.evtx from the Windows Host
 If you have the Column "Task Category" visible we want to search for a Logoff event
@@ -450,7 +450,7 @@ The event before the only Logoff event should be an event for a Logon using "joe
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q2 - LOST KEY**
+## **Q2 - LOST KEY**
 
 There's an encrypted ```note.enc``` in $HOME/inventingroom , but we've lost the key. Here's what we remember:
 
@@ -463,13 +463,13 @@ The answer should be a string of characters, starting with a capital letter, and
 
 What was the original message in ```note.enc``` ?
 
-**A2 - ''**
+### **A2 - ''**
 ```
 
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q3 - EVERLASTING CONFIG FILE**
+## **Q3 - EVERLASTING CONFIG FILE**
 
 The prototype Everlasting Gobstopper Machine is currently turned off - and has been since that candy was moved to the general production 
 line. Just to see if it works, please edit its config and try to start it up. Oh, just to warn you, it might be picky about the time 
@@ -477,7 +477,7 @@ stamp on that config file.
 
 Adjust ```gs-config.txt``` to turn the machine on, and make sure its timestamp is before noon on 30 June, 1971.
 
-**A3 - 'NetWars{VeryLittlePocketMoney}'**
+### **A3 - 'NetWars{VeryLittlePocketMoney}'**
 ```
 contestwinner@oompa-loompa:~/inventingroom$ touch -t 7006301105 gs-config.txt
 contestwinner@oompa-loompa:~/inventingroom$ ./gobstopper 
@@ -490,11 +490,11 @@ contestwinner@oompa-loompa:~/inventingroom$
 ```
 ________________________________________________________________________________________________________________________________________
 
-**Q4 - BY GUM, IT'S GUM!**
+## **Q4 - BY GUM, IT'S GUM!**
 
 I've dropped parts of a flag into the Dinner Gum machine. Can you examine bygumitsgum and find the original string?
 
-**A4 - 'NetWars{ItHappensEveryTimeTheyAllBecomeBlueberries}'**
+### **A4 - 'NetWars{ItHappensEveryTimeTheyAllBecomeBlueberries}'**
 ```
 contestwinner@oompa-loompa:~/inventingroom$ base64 -d bygumitsgum > output
 contestwinner@oompa-loompa:~/inventingroom$ file output
@@ -512,13 +512,13 @@ Decode as Base64 > Decode as URL
 NetWars{ItHappensEveryTimeTheyAllBecomeBlueberries}
 ```
 ________________________________________________________________________________________________________________________________________
-**Q5 - OFF WE GO**
+## **Q5 - OFF WE GO**
 
 We've sewn a secret path to root privileges in your workstation with a SUID 0 setting on an executable.
 Exploit this escalation path and cat the file located at /root/rules.txt .
 
 
-**A5 - 'NetWars{NoTouchingNoMeddlingNoTasting}'**
+### **A5 - 'NetWars{NoTouchingNoMeddlingNoTasting}'**
 ```
 contestwinner@oompa-loompa:~/inventingroom$ find / -perm -4000 2>/dev/null
 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
@@ -539,21 +539,21 @@ root@oompa-loompa:~/inventingroom#
 
 ```
 ________________________________________________________________________________________________________________________________________
-**Q6 - FIXING A HOLE**
+## **Q6 - FIXING A HOLE**
 
 There's a hole in the lickable - I mean uncomplicated - rewall, and we're concerned about our snozzberries!
 
 With UID 0 privileges (as root), please use ```ufw``` to fix the hole - delete the rule that allows TCP/50413 in. Once it's patched up, 
 look in /root/ for the flag we'll drop.
 
-**A5 - 'NetWars{ItTastesLikeSnozzberries}'**
+### **A5 - 'NetWars{ItTastesLikeSnozzberries}'**
 ```
 root@oompa-loompa:/root# sudo ufw delete allow 50413/tcp
 
 ```
 ________________________________________________________________________________________________________________________________________
 
-## Objective: WW - Fizzy Lifting Drink Room :star: :star:
+# Objective: WW - Fizzy Lifting Drink Room :star: :star:
 Something very unusual in here. Bubbles, bubbles everywhere, but not a drop to drink. Yet.
 
 There are our Fizzy Lifting Drinks. They fill you with gas, and the gas is so terrically lifting that it lifts you right off the 
@@ -565,7 +565,7 @@ The challenges in this room center around the
 /home/contestwinner/fizzyliftingdrinkroom/ folder.
 
 ________________________________________________________________________________________________________________________________________
-**Q1 - STRANGE ROOM**
+## **Q1 - STRANGE ROOM**
 
 For some reason, this room reminds me of the windows in my dentist's ofce. Maybe it's the smell...
 
@@ -573,7 +573,7 @@ As root , run **/home/contestwinner/fizzyliftingdrinkroom/enter.sh** to proceed.
 
 What directory do you start in? Answer in the form of /folder
 
-**A1 - '/home'**
+### **A1 - '/home'**
 ```
 root@oompa-loompa:~/inventingroom# /home/contestwinner/fizzyliftingdrinkroom/enter.sh
 PowerShell 6.2.3
@@ -591,11 +591,11 @@ Path
 PS /home> 
 ```
 ________________________________________________________________________________________________________________________________________
-**Q2 - WARNING LABEL**
+## **Q2 - WARNING LABEL**
 
 Let's cd into the pswinner directory. What message is on the warning label?
 
-**A2 - 'NetWars{ItsStillTooPowerful}'**
+### **A2 - 'NetWars{ItsStillTooPowerful}'**
 ```
 PS /home> cd ./pswinner/
 PS /home/pswinner> dir
@@ -613,11 +613,11 @@ NetWars{ItsStillTooPowerful}
 PS /home/pswinner> 
 ```
 ________________________________________________________________________________________________________________________________________
-**Q3 - I SAW THE SIGN**
+## **Q3 - I SAW THE SIGN**
 
 As long as we're reading things, what's the value of the WallSign environment variable?
 
-**A3 - 'NetWars{Obelus}'**
+### **A3 - 'NetWars{Obelus}'**
 ```
 PS /home/pswinner> Get-ChildItem Env:WallSign           
 
@@ -629,7 +629,7 @@ PS /home/pswinner>
 
 ```
 ________________________________________________________________________________________________________________________________________
-**Q4 - COUNTING**
+## **Q4 - COUNTING**
 
 In PowerShell, there's an easy way to generate a range of numbers. How could you generate a list of numbers from 1 to 255?
 
@@ -639,7 +639,7 @@ In PowerShell, there's an easy way to generate a range of numbers. How could you
 * range(1,256)
 
 
-**A4 - '1..255'**
+### **A4 - '1..255'**
 ```
 PS /home/pswinner> 1..255
 1
@@ -655,7 +655,7 @@ etc....
 PS /home/pswinner> 
 ```
 ________________________________________________________________________________________________________________________________________
-**Q5 - ITERATION**
+## **Q5 - ITERATION**
 
 In PowerShell, we can iterate over a list of items (like in the previous question) to use each as a component of another command. 
 For example, if we want to add a few numbers to an existing variable, we can use `ForEach-Object` to do so in a one-liner.
@@ -667,7 +667,7 @@ Which of these options will add three numbers to $sum ?
 * (99,44,100) | @($sum += i)
 * (99,44,100)::$sum -Add
 
-**A5 - '(99,44,100) | %{$sum += $_}'**
+### **A5 - '(99,44,100) | %{$sum += $_}'**
 ```
 PS /home/pswinner> $sum = 1..255
 PS /home/pswinner> (99,44,100) | %{$sum += $_}
@@ -684,7 +684,7 @@ PS /home/pswinner> $sum
 PS /home/pswinner>
 ```
 ________________________________________________________________________________________________________________________________________
-**Q6 - OPENING THE FLD CABINET**
+## **Q6 - OPENING THE FLD CABINET**
 
 Interesting! There's a cabinet labeled "FLD" with an odd lock on it. It's a dial marked "Passcode" with the numbers 0 through 99 on it.
 Let's try every valid value of Passcode as an input to the cabinet.
@@ -692,7 +692,7 @@ Let's try every valid value of Passcode as an input to the cabinet.
 What ag does `FizzyLiftingDrink.ps1` return when fed the right Passcode?
 
 
-**A6 - 'NetWars{IFeelTerriblyStrange}'**
+### **A6 - 'NetWars{IFeelTerriblyStrange}'**
 ```
 PS /home/pswinner> 1..99 | ForEach-Object $_ {./FizzyLiftingDrink.ps1 -Passcode $_}
 Sorry, this isn't the passcode we're looking for.
@@ -702,7 +702,7 @@ Encrypted is: IbcWPikedCHp/PHxorkGz0BByK9hEUKzXeruTwcOT3A=
 Decrypted is: NetWars{IFeelTerriblyStrange}
 ```
 ________________________________________________________________________________________________________________________________________
-**Q6.1 - OPENING THE FLD CABINET**
+## **Q6.1 - OPENING THE FLD CABINET**
 
 Mmm, not bad. Well? Oh, oh, oh, I feel terribly strange!
 
@@ -711,7 +711,7 @@ PowerShell script in the `/usr/` directory that can help us?
 
 Find and execute a file ending in .ps1 .
 
-**A6.1 - 'NetWars{FromNowOnWeKeepOurFeetOnTheGround}'**
+### **A6.1 - 'NetWars{FromNowOnWeKeepOurFeetOnTheGround}'**
 ```
 PS /usr> Get-ChildItem -Path /usr/*.ps1 -Recurse -Force
     Directory: /usr/bin
@@ -730,7 +730,7 @@ PS /usr/lib/apt>
 ```
 ________________________________________________________________________________________________________________________________________
 
-## Objective: WW - Egg Sorting Room :star: :star:
+# Objective: WW - Egg Sorting Room :star: :star:
 This is our Egg Sorting Room. You'll see we have quadruple-sized geese laying octuple-sized eggs! What's that you say? Nuts? 
 No, I'm afraid you have this confused with another universe.
 
