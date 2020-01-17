@@ -74,7 +74,7 @@ ________________________________________________________________________________
 
 What version of VI IMproved is available on your workstation? 
 
-Please answer in the form **\<major version>.\<minor version>**, eg **1.2**
+Please answer in the form **`\<major version>.\<minor version>`**, eg **1.2**
 
 
 **A4 - '7.4'**
@@ -134,12 +134,12 @@ but not these:
 * Tom and Jerry started in the 1940s
 
 Choose one of the folloing:
-* ``` (\d|\d\d) ```
-* ``` *is.* ```
-* ``` [A-Za-z\s]+\d+[a-z\s]* ```
-* ``` [\D]+\d{1,2}[a-z ]+ ```
+* ` (\d|\d\d) `
+* ` *is.* `
+* ` [A-Za-z\s]+\d+[a-z\s]* `
+* ` [\D]+\d{1,2}[a-z ]+ `
 
-**A8 - '``` [\D]+\d{1,2}[a-z ]+ ```'**
+**A8 - '` [\D]+\d{1,2}[a-z ]+ `'**
 
 ________________________________________________________________________________________________________________________________________
 **Q9 - NOT ALL THAT GLITTERS**
@@ -453,8 +453,8 @@ ________________________________________________________________________________
 
 There's an encrypted ```note.enc``` in $HOME/inventingroom , but we've lost the key. Here's what we remember:
 
-* We used a null IV ('\x00')
-* The encryption key was 32 bytes long, and the last 30 bytes of it were null ( \x00 )
+* We used a null IV `('\x00')`
+* The encryption key was 32 bytes long, and the last 30 bytes of it were null `( \x00 )`
 * It was encrypted with aes-256-cbc, no salt, no PKCS7 padding
 * The lowercase string stop was in the original message
 
