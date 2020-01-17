@@ -671,7 +671,7 @@ ________________________________________________________________________________
 Interesting! There's a cabinet labeled "FLD" with an odd lock on it. It's a dial marked "Passcode" with the numbers 0 through 99 on it.
 Let's try every valid value of Passcode as an input to the cabinet.
 
-What ag does FizzyLiftingDrink.ps1 return when fed the right Passcode?
+What ag does `FizzyLiftingDrink.ps1` return when fed the right Passcode?
 
 
 **A6 - 'NetWars{IFeelTerriblyStrange}'**
@@ -682,4 +682,31 @@ Sorry, this isn't the passcode we're looking for.
 Sorry, this isn't the passcode we're looking for.
 Encrypted is: IbcWPikedCHp/PHxorkGz0BByK9hEUKzXeruTwcOT3A=
 Decrypted is: NetWars{IFeelTerriblyStrange}
+```
+________________________________________________________________________________________________________________________________________
+**Q6.1 - OPENING THE FLD CABINET**
+
+Mmm, not bad. Well? Oh, oh, oh, I feel terribly strange!
+
+Oh no! We've flown too high, and now the fan might cut us to ribbons! I'm pretty sure there's something we can do. Maybe there's a 
+PowerShell script in the `/usr/` directory that can help us?
+
+Find and execute a file ending in .ps1 .
+
+**A6.1 - 'NetWars{FromNowOnWeKeepOurFeetOnTheGround}'**
+```
+PS /usr> Get-ChildItem -Path /usr/*.ps1 -Recurse -Force
+    Directory: /usr/bin
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+------           11/6/19  4:38 PM           1145 start.ps1
+
+    Directory: /usr/lib/apt
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+--r---           11/6/19  4:38 PM             49 Burp.ps1
+PS /usr> cd ./lib/apt/
+PS /usr/lib/apt> ./Burp.ps1
+NetWars{FromNowOnWeKeepOurFeetOnTheGround}
+PS /usr/lib/apt> 
 ```
