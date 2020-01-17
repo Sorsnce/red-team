@@ -133,7 +133,8 @@ but not these:
 * Charlie is worth over 1000 dollars or pounds
 * Tom and Jerry started in the 1940s
 
-Choose one of the folloing:
+Choose one of the following:
+
 * ` (\d|\d\d) `
 * ` *is.* `
 * ` [A-Za-z\s]+\d+[a-z\s]* `
