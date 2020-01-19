@@ -16,7 +16,7 @@ classoption: oneside
 code-block-font-size: \scriptsize
 ---
 
-![OpenAmin]("https://raw.github.com/Sorsnce/red-team/blob/master/HTB/Beta/OpenAdmin.png")
+![OpenAmin]("https://imgur.com/a/xORGPuG")
 # Hack the Box: OpenAdmin
 
 ## Introduction
