@@ -15,7 +15,9 @@ book: true
 classoption: oneside
 code-block-font-size: \scriptsize
 ---
-
+<p align="center">
+  <img src="https://github.com/Sorsnce/red-team/blob/master/HTB/Beta/OpenAdmin.png?raw=true" alt="Sublime's custom image"/>
+</p>
 ![OpenAmin](https://i.imgur.com/Ig1QuYE.png)
 # Hack the Box: OpenAdmin
 
