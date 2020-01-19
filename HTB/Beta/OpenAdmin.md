@@ -18,35 +18,31 @@ code-block-font-size: \scriptsize
 <p align="center">
   <img src="https://github.com/Sorsnce/red-team/blob/master/HTB/Beta/OpenAdmin.png?raw=true" alt="Sublime's custom image"/>
 </p>
-![OpenAmin](https://i.imgur.com/Ig1QuYE.png)
+
 # Hack the Box: OpenAdmin
 
 ## Introduction
 
-The Offensive Security Exam penetration test report contains all efforts that were conducted in order to pass the Offensive Security exam.
-This report will be graded from a standpoint of correctness and fullness to all aspects of the exam.
-The purpose of this report is to ensure that the student has a full understanding of penetration testing methodologies as well as the technical knowledge to pass the qualifications for the Offensive Security Certified Professional.
+I thought this was a fun box, but kind of difficult for beginners. I never heard of OpenNetAdmin before this Hack the Box, but relized that this web service may contain more exploits that have not been reported. The box maker did a good job at guiding us to perform manual exploitating and giving us a nice simulation of how damaging this exploit could be.
 
 ## Objective
 
-The objective of this assessment is to perform an internal penetration test against the Offensive Security Exam network.
-The student is tasked with following methodical approach in obtaining access to the objective goals.
-This test should simulate an actual penetration test and how you would start from beginning to end, including the overall report.
-An example page has already been created for you at the latter portions of this document that should give you ample information on what is expected to pass this course.
-Use the sample report as a guideline to get you through the reporting.
+The objective of box is to simulate a real world use case of a software named: "OpenNetAdmin". If you google this software we will find the following description.
+
+OpenNetAdmin provides a database managed inventory of your IP network. Each subnet, host, and IP can be tracked via a centralized AJAX enabled web interface that can help reduce tracking errors. A full CLI interface is available as well to use for scripting and bulk work. We hope to provide a useful Network Management application for managing your IP subnets, hosts and much more. Stop using spreadsheets to manage your network! Start doing proper IP address management!
 
 ## Requirements
 
-The student will be required to fill out this penetration testing report fully and to include the following sections:
+The attacker will need the following software to exploit this box.
 
-- Overall High-Level Summary and Recommendations (non-technical)
-- Methodology walkthrough and detailed outline of steps taken
-- Each finding with included screenshots, walkthrough, sample code, and proof.txt if applicable
-- Any additional items that were not included
+- NMAP
+- Gobuster
+- Metasploit
+- GTFOBins
+- find
 
 
-
-# Scanning
+# Scanning/Enumeration
 
 Info about Scanning
 
