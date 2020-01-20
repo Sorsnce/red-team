@@ -44,13 +44,32 @@ The attacker will need the following software to exploit this box.
 
 # Scanning/Enumeration
 
-Info about Scanning
+Target: `10.10.10.171`
 
-- 192.168.xx.xx (hostname) - Name of initial exploit
-- 192.168.xx.xx (hostname) - Name of initial exploit
-- 192.168.xx.xx (hostname) - Name of initial exploit
-- 192.168.xx.xx (hostname) - Name of initial exploit
-- 192.168.xx.xx (hostname) - BOF
+```
+traeh@kali:~$ sudo nmap -sS 10.10.10.171
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-01-19 20:09 EST
+Nmap scan report for 10.10.10.171
+Host is up (0.067s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 1.22 seconds
+traeh@kali:~$ 
+```
+
+Lets view what we can see on TCP Port 80:
+<p align="center">
+  <img src="https://github.com/Sorsnce/red-team/blob/master/HTB/Beta/apache.png?raw=true" alt="Sublime's custom image"/>
+</p>
+
+Now that we know there is a web server running on TCP port 80 lets perform a DirBuster:
+
+```
+
+```
 
 ## Place-Holder
 
