@@ -19,6 +19,8 @@ code-block-font-size: \scriptsize
   <img src="https://github.com/Sorsnce/red-team/blob/master/HTB/Beta/OpenAdmin.png?raw=true" alt="Sublime's custom image"/>
 </p>
 
+![OpenAdmin](https://github.com/Sorsnce/red-team/blob/master/HTB/Beta/OpenAdmin.png)
+
 # Hack the Box: OpenAdmin
 
 ## Introduction
