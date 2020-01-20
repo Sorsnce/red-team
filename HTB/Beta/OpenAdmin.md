@@ -60,9 +60,7 @@ traeh@kali:~$
 ```
 
 Lets view what we can see on TCP Port 80:
-<p align="center">
-  <img src="https://github.com/Sorsnce/red-team/blob/master/HTB/Beta/apache.png?raw=true" alt="Sublime's custom image"/>
-</p>
+![Apache](https://raw.githubusercontent.com/Sorsnce/red-team/master/HTB/Beta/apache.png)
 
 Now that we know there is a web server running on TCP port 80 lets perform a DirBuster:
 
