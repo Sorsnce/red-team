@@ -68,8 +68,26 @@ Lets view what we can see on TCP Port 80:
 Now that we know there is a web server running on TCP port 80 lets perform a DirBuster:
 
 ```
+traeh@kali:~/HTB/red-team$ sudo gobuster dir -u http://10.10.10.171 -w ~/HTB/red-team/wordlists/directory-list-2.3-medium.txt
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://10.10.10.171
+[+] Threads:        10
+[+] Wordlist:       /home/traeh/HTB/red-team/wordlists/directory-list-2.3-medium.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Timeout:        10s
+===============================================================
+2020/01/19 20:16:02 Starting gobuster
+===============================================================
+/music (Status: 301)
+/artwork (Status: 301)
 
 ```
+
+We immediately see a directory named "music", let's browse to that directory and see what we can find.
 
 ## Place-Holder
 
