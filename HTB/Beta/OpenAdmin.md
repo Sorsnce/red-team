@@ -111,33 +111,7 @@ root@kali:~/HTB/red-team/HTB/Beta# msfconsole
 
 Call trans opt: received. 2-19-98 13:24:18 REC:Loc
 
-     Trace program: running
-
-           wake up, Neo...
-        the matrix has you
-      follow the white rabbit.
-
-          knock, knock, Neo.
-
-                        (`.         ,-,
-                        ` `.    ,;' /
-                         `.  ,'/ .'
-                          `. X /.'
-                .-;--''--.._` ` (
-              .'            /   `
-             ,           ` '   Q '
-             ,         ,   `._    \
-          ,.|         '     `-.;_'
-          :  . `  ;    `  ` --,.._;
-           ' `    ,   )   .'
-              `._ ,  '   /_
-                 ; ,''-,;' ``-
-                  ``-..__``--`
-
-                             https://metasploit.com
-
-
-       =[ metasploit v5.0.62-dev                          ]
++ -- --=[ metasploit v5.0.62-dev                          ]
 + -- --=[ 1950 exploits - 1090 auxiliary - 334 post       ]
 + -- --=[ 558 payloads - 45 encoders - 10 nops            ]
 + -- --=[ 7 evasion                                       ]
@@ -190,19 +164,26 @@ meterpreter >
 
 Success! We have a Meterpreter session!
 
-## Place-Holder
+## www-data
 
-The information gathering portion of a penetration test focuses on identifying the scope of the penetration test.
-During this penetration test, I was tasked with exploiting the exam network.
-The specific IP addresses were:
+Now that we have access to this box let's try to get the `user.txt` flag:
 
-**Exam Network**
+```bash
+meterpreter > shell
+Process 2625 created.
+Channel 1 created.
+whoami
+www-data
+ls /home
+jimmy
+joanna
+cd jimmy
+/bin/sh: 3: cd: can't cd to jimmy
+cd joanna
+/bin/sh: 4: cd: can't cd to joanna
+```
 
-- 192.168.
-- 192.168.
-- 192.168.
-- 192.168.
-- 192.168.
+Well, it looks like `www-data` does not have access to view the home directories for the `user.txt` flag.
 
 # Privilege Escalation
 
