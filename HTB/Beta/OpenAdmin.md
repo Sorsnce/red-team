@@ -38,7 +38,7 @@ The attacker will need the following software to exploit this box.
 - Gobuster
 - Metasploit
 - GTFOBins
-- find
+- Find
 
 
 # Scanning/Enumeration
@@ -60,6 +60,7 @@ traeh@kali:~$
 ```
 
 Lets view what we can see on TCP Port 80:
+
 ![Apache](https://raw.githubusercontent.com/Sorsnce/red-team/master/HTB/Beta/apache.png)
 
 Now that we know there is a web server running on TCP port 80 lets perform a DirBuster:
@@ -86,11 +87,17 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 
 We immediately see a directory named "music", let's browse to that directory and see what we can find.
 
-## Place-Holder
+![Music](https://raw.githubusercontent.com/Sorsnce/red-team/master/HTB/Beta/music.JPG)
 
-I recommend patching the vulnerabilities identified during the testing to ensure that an attacker cannot exploit these systems in the future.
-One thing to remember is that these systems require frequent patching and once patched, should remain on a regular patch program to protect additional vulnerabilities that are discovered at a later date.
+We see a button within the dropdown menu that allows us to log into this site, lets click on that hyperlink and see what happens.
 
+![ONA](https://raw.githubusercontent.com/Sorsnce/red-team/master/HTB/Beta/ONA.JPG)
+
+We can now see that this box is running something called OpenNetAdmin with a version of `18.1.1`. Lets perform a quick Google search to find out more infomatino about this product.
+
+## OpenNetAdmin
+
+Place Holder
 
 
 # Exploiting
