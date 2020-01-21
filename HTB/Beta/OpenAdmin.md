@@ -1,6 +1,6 @@
 ---
 title: "HTB: OpenAdmin"
-author: ["Trae Horton", "sorsnce.com"]
+author: ["Trae Horton" | "https://sorsnce.com"]
 date: "2020-01-14"
 subject: "Markdown"
 keywords: [Markdown, Example]
@@ -46,7 +46,7 @@ The attacker will need the following software to exploit this box.
 Target: `10.10.10.171`
 
 ```
-traeh@kali:~$ sudo nmap -sS 10.10.10.171
+root@kali:~$ sudo nmap -sS 10.10.10.171
 Starting Nmap 7.80 ( https://nmap.org ) at 2020-01-19 20:09 EST
 Nmap scan report for 10.10.10.171
 Host is up (0.067s latency).
@@ -56,7 +56,7 @@ PORT   STATE SERVICE
 80/tcp open  http
 
 Nmap done: 1 IP address (1 host up) scanned in 1.22 seconds
-traeh@kali:~$ 
+root@kali:~$ 
 ```
 
 Lets view what we can see on TCP Port 80:
@@ -66,7 +66,7 @@ Lets view what we can see on TCP Port 80:
 Now that we know there is a web server running on TCP port 80 lets perform a DirBuster:
 
 ```
-traeh@kali:~/HTB/red-team$ sudo gobuster dir -u http://10.10.10.171 -w ~/HTB/red-team/wordlists/directory-list-2.3-medium.txt
+root@kali:~/HTB/red-team$ sudo gobuster dir -u http://10.10.10.171 -w ~/HTB/red-team/wordlists/directory-list-2.3-medium.txt
 ===============================================================
 Gobuster v3.0.1
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
@@ -97,8 +97,71 @@ We can now see that this box is running something called OpenNetAdmin with a ver
 
 ## OpenNetAdmin
 
-Place Holder
+We quickly see that there is an active (RCE) exploit for OpenNetAdmin version `18.1.1`. There appears to be two exploits available  within exploit-db, one appears to be a manual exploit via PHP and the other appears to use Metasploit. 
 
+![Google-ONA](https://raw.githubusercontent.com/Sorsnce/red-team/master/HTB/Beta/Google.JPG)
+
+Lets search our Metasploit instance to see if we have a copy of this RCE exploit.
+
+```
+root@kali:~/HTB/red-team/HTB/Beta# msfconsole
+[-] ***rtinG the Metasploit Framework console...\
+[-] * WARNING: No database support: No database YAML file
+[-] ***
+
+Call trans opt: received. 2-19-98 13:24:18 REC:Loc
+
+     Trace program: running
+
+           wake up, Neo...
+        the matrix has you
+      follow the white rabbit.
+
+          knock, knock, Neo.
+
+                        (`.         ,-,
+                        ` `.    ,;' /
+                         `.  ,'/ .'
+                          `. X /.'
+                .-;--''--.._` ` (
+              .'            /   `
+             ,           ` '   Q '
+             ,         ,   `._    \
+          ,.|         '     `-.;_'
+          :  . `  ;    `  ` --,.._;
+           ' `    ,   )   .'
+              `._ ,  '   /_
+                 ; ,''-,;' ``-
+                  ``-..__``--`
+
+                             https://metasploit.com
+
+
+       =[ metasploit v5.0.62-dev                          ]
++ -- --=[ 1950 exploits - 1090 auxiliary - 334 post       ]
++ -- --=[ 558 payloads - 45 encoders - 10 nops            ]
++ -- --=[ 7 evasion                                       ]
+
+msf5 > search OpenNetAdmin
+[-] No results from search
+msf5 >
+```
+
+It appears at the time of writing this report, this exploit is not in Metasploit's database by default. We can try updating the database but more than likely it will not pull the latest copy of this exploit. Let's manually add this exploit to our Metasploit instance by using the following code:
+
+```
+root@kali:~# wget https://www.exploit-db.com/raw/47772
+--2020-01-21 15:11:24--  https://www.exploit-db.com/raw/47772
+Resolving www.exploit-db.com (www.exploit-db.com)... 192.124.249.8
+Connecting to www.exploit-db.com (www.exploit-db.com)|192.124.249.8|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3017 (2.9K) [text/plain]
+Saving to: ‘47772’  
+47772                         100%[=================================================>]   2.95K  --.-KB/s    in 0s
+2020-01-21 15:11:24 (20.4 MB/s) - ‘47772’ saved [3017/3017]
+root@kali:~# mkdir -p ~/.msf4/modules/exploits/custom
+root@kali:~# mv 47772 ~/.msf4/modules/exploits/custom/ona.rb
+```
 
 # Exploiting
 
