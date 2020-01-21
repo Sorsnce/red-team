@@ -1,6 +1,6 @@
 ---
 title: "HTB: OpenAdmin"
-author: ["Trae Horton" | "https://sorsnce.com"]
+author: ["Trae Horton", "https://sorsnce.com"]
 date: "2020-01-14"
 subject: "Markdown"
 keywords: [Markdown, Example]
@@ -103,7 +103,7 @@ We quickly see that there is an active (RCE) exploit for OpenNetAdmin version `1
 
 Lets search our Metasploit instance to see if we have a copy of this RCE exploit.
 
-```
+```bash
 root@kali:~/HTB/red-team/HTB/Beta# msfconsole
 [-] ***rtinG the Metasploit Framework console...\
 [-] * WARNING: No database support: No database YAML file
@@ -167,7 +167,7 @@ root@kali:~# mv 47772 ~/.msf4/modules/exploits/custom/ona.rb
 
 Now that we have the Metasploit exploit within our database lets attempt to run this exploit:
 
-```
+```bash
 msf5 > use exploit/custom/ona
 msf5 exploit(custom/ona) > set RHOST 10.10.10.141
 RHOST => 10.10.10.171
