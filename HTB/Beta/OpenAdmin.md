@@ -508,12 +508,12 @@ Note: This format may emit false positives, so it will keep trying even after
 finding a possible candidate.
 Press 'q' or Ctrl-C to abort, almost any other key for status
 bloodninjas      (/root/HTB/machines/OpenAdmin/key)
-1g 0:00:00:16 DONE (2020-01-22 19:26) 0.06188g/s 887481p/s 887481c/s 887481C/s *7¡Vamos!
+1g 0:00:00:16 DONE (2020-01-22 19:26) 0.06188g/s 887481p/s 887481c/s 887481C/s
 Session completed
 root@kali:~#
 ```
 
-And voila! We have the password to `joanna` `bloodninjas`. Let's ssh into `joanna`'s account with the password of `bloodninjas`:
+And voila! We have the password to `joanna`, the password is `bloodninjas`. Let's ssh into `joanna`'s account with the password of `bloodninjas`:
 
 ```bash
 root@kali:~# ssh joanna@10.10.10.171 -i ~/HTB/machines/OpenAdmin/key
