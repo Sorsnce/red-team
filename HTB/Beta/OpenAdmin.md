@@ -207,7 +207,7 @@ winc
 workspace_plugins
 ```
 
-I spent a lot of time looking through these directories for anything interesting, I was trying to get a good understanding of what the source code was doing under the hood. I came acrossed this directory that looked interesting.
+I spent a lot of time looking through these directories for anything interesting, I was trying to get a good understanding of what the source code was doing under the hood. I came across this directory that looked interesting.
 
 ```bash
 pwd
