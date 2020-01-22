@@ -285,54 +285,63 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-70-generic x86_64)
 Last login: Thu Jan  2 20:50:03 2020 from 10.10.14.3
 jimmy@openadmin:~$
 ```
-Golden we are now in has `jimmy`
+
+Golden we are now `jimmy`
 
 ## Jimmy
 
-*Additional Priv Esc info*
+Now that we have access to `jimmy`'s account lets see if we can print the `user.txt` flag.
 
-**Vulnerability Exploited:**
+```bash
+jimmy@openadmin:~$ ls
+jimmy@openadmin:~$ pwd
+/home/jimmy
+jimmy@openadmin:~$
+```
+Looks like the `user.txt` flag is not in `jimmy`'s home directory, let's look in `joanna`'s home folder.
 
-**Vulnerability Explanation:**
+```bash
+jimmy@openadmin:~$ cd /home/joanna/
+-bash: cd: /home/joanna/: Permission denied
+jimmy@openadmin:~$
+```
 
-**Vulnerability Fix:**
+No luck, we either have to perform privilege escalation on `jimmy`'s account or try to get logged in via `joanna`'s account. Let's first try to escalate `jimmy`'s account:
 
-**Severity:**
+```bash
+jimmy@openadmin:~$ sudo -l
+[sudo] password for jimmy:
+Sorry, user jimmy may not run sudo on openadmin.
+jimmy@openadmin:~$ find / -perm -u=s -type f 2>/dev/null
+/usr/lib/openssh/ssh-keysign
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/snapd/snap-confine
+/usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/bin/newgrp
+/usr/bin/pkexec
+/usr/bin/newgidmap
+/usr/bin/sudo
+/usr/bin/passwd
+/usr/bin/newuidmap
+/usr/bin/chsh
+/usr/bin/traceroute6.iputils
+/usr/bin/chfn
+/usr/bin/gpasswd
+/usr/bin/at
+/bin/ping
+/bin/umount
+/bin/su
+/bin/mount
+/bin/fusermount
+```
 
-**Exploit Code:**
+It does'nt appear we can eaily escalation `jimmy`'s account. Let's try looking to see what directories `jimmy` has access to via his account and group he is listed under.
 
-**Proof Screenshot Here:**
+```bash
 
-**Proof.txt Contents:**
-
-### System IP: 192.168.x.x
-
-#### Service Enumeration
-
-Server IP Address | Ports Open
-------------------|----------------------------------------
-192.168.x.x       | **TCP**: 1433,3389\
-**UDP**: 1434,161
-
-**Nmap Scan Results:**
-
-*Initial Shell Vulnerability Exploited*
-
-*Additional info about where the initial shell was acquired from*
-
-**Vulnerability Explanation:**
-
-**Vulnerability Fix:**
-
-**Severity:**
-
-**Proof of Concept Code Here:**
-
-**Local.txt Proof Screenshot**
-
-**Local.txt Contents**
-
-
+```
 
 **Proof Screenshot:**
 
