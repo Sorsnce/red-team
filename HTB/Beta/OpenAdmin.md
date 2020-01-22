@@ -217,7 +217,7 @@ config
 nmap_scans
 plugins
 ```
-I was initally interested in the `nmap_scans` directory, but then relized that those nmap scan would not help me with a static HTB. I looked in the `config` directory to see if there was anything critical information within the configuration that might be vulnerable:
+I was initially interested in the `nmap_scans` directory, but then relized that those nmap scan would not help me with a static HTB. I looked in the `config` directory to see if there was anything critical information within the configuration that might be vulnerable:
 
 ```bash
 ls
