@@ -11,6 +11,7 @@ titlepage-color: "78051c"
 titlepage-text-color: "FFFAFA"
 titlepage-rule-color: "FFFAFA"
 titlepage-rule-height: 2
+titlepage-background: "https://raw.githubusercontent.com/Sorsnce/red-team/master/NetWars/background.pdf"
 book: true
 classoption: oneside
 code-block-font-size: \scriptsize
