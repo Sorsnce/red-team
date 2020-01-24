@@ -784,3 +784,18 @@ Target: 127.0.0.127
 ```
 
 ```
+________________________________________________________________________________________________________________________________________
+## **Q3 - THERE'S ALWAYS A CHANCE**
+
+As you well know, we are **most** concerned with the prospect of spies in our factory. As such, we routinely send covert messages 
+across the network to see if they are detected.
+
+Can you find the message in `/home/mike/Desktop/Message1.pcapng` ?
+
+### **A3 - 'NetWars{SometimesItsEasy}'**
+```
+root@oompa-loompa:~/inventingroom# wireshark /home/mike/Desktop/Message1.pcapng
+
+Filter Wireshark by 'DNS' and then look for a Malformed Packet
+Filter : 'udp.stream eq 15'
+```
