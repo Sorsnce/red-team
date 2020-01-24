@@ -741,14 +741,19 @@ The challenges in this room center around the
 ________________________________________________________________________________________________________________________________________
 ## **Q1 - SULFUROUS SMELL**
 
-Mmm, not bad. Well? Oh, oh, oh, I feel terribly strange!
+A process running on your system is bound to a specic TCP port. When you run `/home/contestwinner/eggsortingroom/egg-presenter` , 
+an egg ischosen at random, sent through that port, and evaluated by the sorter.
 
-Oh no! We've flown too high, and now the fan might cut us to ribbons! I'm pretty sure there's something we can do. Maybe there's a 
-PowerShell script in the `/usr/` directory that can help us?
+What TCP port are these processes using?
 
-Find and execute a file ending in .ps1 .
-
-### **A1 - ''**
+### **A1 - '44100'**
 ```
+root@oompa-loompa:~/eggsortingroom# ./egg-presenter 
+*** connecting to 127.0.0.1
+*** Testing b'Egg #694066' with hash b'\xa1\\\x9e\xa3\xc0l\xedwU\xf1K\xfc\xa1y\xe9\xd1?Y\xa8U'
+*** Received b'Egg number 694066 is a good egg'
+Closing socket
+root@oompa-loompa:~/eggsortingroom# 
 
+While you have wireshark open.
 ```
