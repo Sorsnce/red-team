@@ -818,7 +818,7 @@ ________________________________________________________________________________
 Oh dear me - a 64-bit Windows 8.1 workstation in our Egg Sorting Room has been compromised! We'll have to take a look and see 
 what happened to it.
 
-What egg-named program le was running on the system at the time of the memory snapshot, `/home/contestwinner/eggsortingroom/OL4.raw` ?
+What egg-named program file was running on the system at the time of the memory snapshot, `/home/contestwinner/eggsortingroom/OL4.raw` ?
 Answer in the form of `file.ext` .
 
 ### **A4 - ''**
