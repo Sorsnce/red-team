@@ -757,3 +757,30 @@ root@oompa-loompa:~/eggsortingroom#
 
 While you have wireshark open.
 ```
+________________________________________________________________________________________________________________________________________
+## **Q1.1 - SPECIAL EGG**
+
+What would happen if egg-presenter sent egg #89496? Please give the returned string, excluding any quotes, e.g. 
+Egg number 133007 is a good egg
+
+### **A1.1 - ''**
+```
+
+```
+________________________________________________________________________________________________________________________________________
+## **Q2 - THERE'S ALWAYS A CHANCE**
+
+It seems a rotten child has fallen down the bad egg chute. Unfortunately, she was holding a pack of our new Vegetable Gum, 
+and we really can't afford to have it burnt up - not today. Could you please shut it down? It's rigged with a back door that 
+shuts it off when a single packet hits 127.0.0.127 on UDP port 123. Oh, and it expects that packet to come from 10.99.99.99, 
+port 321 - I hope that's not a problem. Once it's off, it'll throw a special NetWars ag in `/tmp/` . Your answer will be the name 
+of that file, minus any file extension. Grab it before your `/tmp/` incinerator runs!
+
+Turn the incinerator off with a spoofed UDP packet
+
+Target: 127.0.0.127
+
+### **A2 - ''**
+```
+
+```
