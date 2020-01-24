@@ -785,7 +785,7 @@ Target: 127.0.0.127
 
 ```
 ________________________________________________________________________________________________________________________________________
-## **Q3 - THERE'S ALWAYS A CHANCE**
+## **Q3 - SPY CHECK**
 
 As you well know, we are **most** concerned with the prospect of spies in our factory. As such, we routinely send covert messages 
 across the network to see if they are detected.
@@ -798,4 +798,30 @@ root@oompa-loompa:~/inventingroom# wireshark /home/mike/Desktop/Message1.pcapng
 
 Filter Wireshark by 'DNS' and then look for a Malformed Packet
 Filter : 'udp.stream eq 15'
+```
+________________________________________________________________________________________________________________________________________
+## **Q3.1 - SPY TOO**
+
+`/home/mike/Desktop/Message2.pcapng` also carries a flag; it was transmitted between the same hosts as the previous one. 
+However, this one won't be available as printable text in a console.
+
+Extract the file transferred between hosts to discover the flag.
+
+### **A3.1 - ''**
+```
+root@oompa-loompa:~/inventingroom# wireshark /home/mike/Desktop/Message2.pcapng 
+
+```
+________________________________________________________________________________________________________________________________________
+## **Q4 - COMPROMISED LOOMPA**
+
+Oh dear me - a 64-bit Windows 8.1 workstation in our Egg Sorting Room has been compromised! We'll have to take a look and see 
+what happened to it.
+
+What egg-named program le was running on the system at the time of the memory snapshot, `/home/contestwinner/eggsortingroom/OL4.raw` ?
+Answer in the form of `file.ext` .
+
+### **A4 - ''**
+```
+
 ```
