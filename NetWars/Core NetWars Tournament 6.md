@@ -737,3 +737,18 @@ No, I'm afraid you have this confused with another universe.
 
 The challenges in this room center around the
 `/home/contestwinner/eggsortingroom/` folder.
+
+________________________________________________________________________________________________________________________________________
+## **Q1 - SULFUROUS SMELL**
+
+Mmm, not bad. Well? Oh, oh, oh, I feel terribly strange!
+
+Oh no! We've flown too high, and now the fan might cut us to ribbons! I'm pretty sure there's something we can do. Maybe there's a 
+PowerShell script in the `/usr/` directory that can help us?
+
+Find and execute a file ending in .ps1 .
+
+### **A1 - ''**
+```
+
+```
