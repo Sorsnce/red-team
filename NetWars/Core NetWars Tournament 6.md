@@ -38,7 +38,7 @@ What user account are you automatically logged into in the provided virtual mach
 
 
 ### **A1 - 'contestwinner'**
-```
+```bash
 contestwinner@oompa-loompa:~$  whoami
 contestwinner
 ```
@@ -50,7 +50,7 @@ What's the host name of your workstation?
 
 
 ### **A2 - 'oompa-loompa'**
-```
+```bash
 contestwinner@oompa-loompa:~$ hostname
 oompa-loompa
 ```
@@ -63,7 +63,7 @@ Your system has something odd in its path. What is it?
 
 
 ### **A3 - '/usr/bin/wonkafactory'**
-```
+```bash
 contestwinner@oompa-loompa:~$ echo $PATH
 /home/contestwinner/.rvm/gems/ruby-2.4.6/bin:/home/contestwinner/.rvm/gems/ruby-2.4.6@global/bin:
 /usr/share/rvm/rubies/ruby2.4.6/bin:/home/contestwinner/bin:/home/contestwinner/.local/bin:
@@ -79,7 +79,7 @@ Please answer in the form **`\<major version>.\<minor version>`**, eg **1.2**
 
 
 ### **A4 - '7.4'**
-```
+```bash
 contestwinner@oompa-loompa:~$ vim --version
 VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jun 07 2019 15:35:43)
 ```
@@ -91,7 +91,7 @@ there is a text file called toadstool.txt. Which user is able to write to this f
 
 
 ### **A5 - 'mike'**
-```
+```bash
 contestwinner@oompa-loompa:~$ ls -l
 -r--rw----  1 contestwinner teavee               62 Nov  6 16:37 toadstool.txt
 contestwinner@oompa-loompa:~$ cat /etc/group | grep teavee
@@ -104,7 +104,7 @@ When was your Oompa Loompa born? That is, on what date was your default shell/co
 Answer with a date in the format YYYYMMDD
 
 ### **A6 - '20190314'**
-```
+```bash
 contestwinner@oompa-loompa:~$ ls -l /bin/bash
 -rwxr-xr-x 1 root root 1037528 Mar 14  2019 /bin/bash
 ```
@@ -115,7 +115,7 @@ Someone is trying to sull the name of our chocolate! Inside your Oompa Loompa wo
 installed package has been modified. What's the sha1sum of the maliciously inserted file?
 
 ### **A7 - ''**
-```
+```bash
 contestwinner@oompa-loompa:~$
 
 ```
@@ -157,7 +157,7 @@ different… Which one isthe fake?
 
 
 ### **A9 - 'ticket5.gif'**
-```
+```bash
 contestwinner@oompa-loompa:~/tickets$ sha256sum *
 d1e4bfb0686e6b550245e9a58418ec2c4a4db1cd06f5dc86455d94f60a1b99f5  ticket1.gif
 d1e4bfb0686e6b550245e9a58418ec2c4a4db1cd06f5dc86455d94f60a1b99f5  ticket2.gif
@@ -190,7 +190,7 @@ Specically, which command will append the output of ls -l to /tmp/listing.txt AN
 * ls -l | top /tmp/listing.txt
 
 ### **A1 - 'ls -l | tee -a /tmp/listing.txt'**
-```
+```bash
 contestwinner@oompa-loompa:~/chocolateroom$ ls -l | tee -a /tmp/listing.txt
 total 5368
 drwxr-xr-x  2 contestwinner contestwinner    4096 Nov  6 16:37 buttercups
@@ -221,7 +221,7 @@ Oh, there’s a buttercup ower that’s gone bad. Please rename the one in $HOME
 
 
 ### **A2 - 'NetWars{YouCanEatAlmostEverything}'**
-```
+```bash
 contestwinner@oompa-loompa:~/chocolateroom/buttercups$ mv ./-buttercup5.txt buttercup5.txt
 contestwinner@oompa-loompa:~/chocolateroom/buttercups$ ./bc-sniff 
 Yes yes - THANK you!
@@ -238,7 +238,7 @@ $HOME/chocolateroom/ folder tree is an executable program?
 
 
 ### **A3 - 'lollipop99-44'**
-```
+```bash
 contestwinner@oompa-loompa:~/chocolateroom$ find $HOME/chocolateroom/ -exec file {} \; | grep ELF
 /home/contestwinner/chocolateroom/row99/column44/lollipop99-44: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 2.6.32, BuildID[sha1]=d3bc3a83e6b748869189ea2b5eb6e4541cc45d99, not stripped
 /home/contestwinner/chocolateroom/buttercups/bc-sniff: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 2.6.32, BuildID[sha1]=28ba79c778f7402713aec6af319ee0fbaf3a8014, stripped
@@ -256,7 +256,7 @@ It seems someone used your terminal to do a bit of Android app reversing. What�
 
 
 ### **A4 - 'SantaGram_4.2.apk'**
-```
+```bash
 contestwinner@oompa-loompa:~/chocolateroom/row99/column44$ history | grep ".apk"
    35  ncat 172.26.85.45 41370 > SantaGram_4.2.apk
    36  apktool -d SantaGram_4.2.apk
@@ -283,7 +283,7 @@ What type of attack do lines 10, 20, 30, etc. in effluent.txt resemble?
 * input bounds poisoning
 
 ### **A5 - 'SQL injection'**
-```
+```bash
 contestwinner@oompa-loompa:~/chocolateroom$ cat effluent.txt 
 anisotropy
 @tkh16
@@ -313,7 +313,7 @@ ________________________________________________________________________________
 
 Here in our factory, we have a WWAF - Wonka Web Application Firewall! It works similarly to other modern WAF technologies. We use JSON 
 rule sets to filter out good input with positive values from bad input using negative values. For example:
-```
+```bash
 {
  "\\d":-50,
  "[a-z]":1
@@ -328,7 +328,7 @@ Then run ./filter -r my-rules.json < effluent.txt and (if correct) submit the ha
 Note: ./filter -h will show you lter options
 
 ### **A5.1 - ''**
-```
+```bash
 contestwinner@oompa-loompa:~/chocolateroom$ cp scoring.json my-rules.json
 contestwinner@oompa-loompa:~/chocolateroom$ nano my-rules.json
 
@@ -354,7 +354,7 @@ Once you’ve achieved this, what’s the SHA1 hash of the filtered output? This
 Hint: You can test your regular expressions using sites such as https://regex101.com/ (https://regex101.com/).
 
 ### **A5.2 - ''**
-```
+```bash
 contestwinner@oompa-loompa:~/chocolateroom$ 
 
 ```
@@ -370,7 +370,7 @@ Use openssl enc -aes-256-cbc to encrypt anything. Then look at the contents with
 What are the first six characters in the file?
 
 ### **A6 - ''**
-```
+```bash
 contestwinner@oompa-loompa:~/chocolateroom$ 
 
 ```
@@ -384,14 +384,14 @@ If you add -p or -P to the prior openssl command, you'll notice certain values a
 * **Key**: The secret, shared value that is used to encrypt and decrypt the message.
 * **IV**: Ciphers like AES-CBC uses a rolling encryption scheme. You can think of an **initialization vector** as the starting point in that roll
 
-``` openssl ``` creates a pseudo-random **salt** each time it's run. The **key** and **IV** are derived from the password the user supplies. 
+` openssl ` creates a pseudo-random **salt** each time it's run. The **key** and **IV** are derived from the password the user supplies. 
 If you run the command multiple times, the values change because of the **salt**.
 
-If you tell openssl not to use a **salt**, what **IV** comes with the password ``` Nice children ``` ? Give your answer as a string of 32 hexadecimal characters.
+If you tell openssl not to use a **salt**, what **IV** comes with the password ` Nice children ` ? Give your answer as a string of 32 hexadecimal characters.
 
 
 ### **A6.1 - ''**
-```
+```bash
 contestwinner@oompa-loompa:~/chocolateroom$ 
 
 ```
@@ -406,7 +406,7 @@ passphrase is ``` Pure Imagination ```. It could be accomplished with **openssl*
 Decrypt this le and submit a SHA-1 sum of its contents.
 
 ### **A6.2 - ''**
-```
+```bash
 contestwinner@oompa-loompa:~/chocolateroom$ 
 
 ```
@@ -431,7 +431,7 @@ host or VM, feel free to use PowerShell or Event Viewer to analyze the evidence.
 First, please examine the file and let us know how many events were captured.
 
 ### **A1 - '38'**
-```
+```bash
 Copy the loginlog.evtx from the VM to your Windows Host
 Open loginlog.evtx from the Windows Host
 Count how many events were captured in loginlog.evtx
@@ -444,7 +444,7 @@ Please, analyze the log le and let us know which account was successfully levera
 
 
 ### **A1.1 - 'joe'**
-```
+```bash
 Open loginlog.evtx from the Windows Host
 If you have the Column "Task Category" visible we want to search for a Logoff event
 The event before the only Logoff event should be an event for a Logon using "joe" with impersonation Level of "Impersonation"
@@ -465,7 +465,7 @@ The answer should be a string of characters, starting with a capital letter, and
 What was the original message in ```note.enc``` ?
 
 ### **A2 - ''**
-```
+```bash
 
 ```
 ________________________________________________________________________________________________________________________________________
@@ -479,7 +479,7 @@ stamp on that config file.
 Adjust ```gs-config.txt``` to turn the machine on, and make sure its timestamp is before noon on 30 June, 1971.
 
 ### **A3 - 'NetWars{VeryLittlePocketMoney}'**
-```
+```bash
 contestwinner@oompa-loompa:~/inventingroom$ touch -t 7006301105 gs-config.txt
 contestwinner@oompa-loompa:~/inventingroom$ ./gobstopper 
 Attempting to turn machine ON
@@ -496,7 +496,7 @@ ________________________________________________________________________________
 I've dropped parts of a flag into the Dinner Gum machine. Can you examine bygumitsgum and find the original string?
 
 ### **A4 - 'NetWars{ItHappensEveryTimeTheyAllBecomeBlueberries}'**
-```
+```bash
 contestwinner@oompa-loompa:~/inventingroom$ base64 -d bygumitsgum > output
 contestwinner@oompa-loompa:~/inventingroom$ file output
 output: gzip compressed data, last modified: Wed Jan 23 14:53:19 2019, from Unix
@@ -520,7 +520,7 @@ Exploit this escalation path and cat the file located at /root/rules.txt .
 
 
 ### **A5 - 'NetWars{NoTouchingNoMeddlingNoTasting}'**
-```
+```bash
 contestwinner@oompa-loompa:~/inventingroom$ find / -perm -4000 2>/dev/null
 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
 /usr/lib/eject/dmcrypt-get-device
@@ -548,7 +548,7 @@ With UID 0 privileges (as root), please use ```ufw``` to fix the hole - delete t
 look in /root/ for the flag we'll drop.
 
 ### **A5 - 'NetWars{ItTastesLikeSnozzberries}'**
-```
+```bash
 root@oompa-loompa:/root# sudo ufw delete allow 50413/tcp
 
 ```
@@ -575,7 +575,7 @@ As root , run **/home/contestwinner/fizzyliftingdrinkroom/enter.sh** to proceed.
 What directory do you start in? Answer in the form of /folder
 
 ### **A1 - '/home'**
-```
+```bash
 root@oompa-loompa:~/inventingroom# /home/contestwinner/fizzyliftingdrinkroom/enter.sh
 PowerShell 6.2.3
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -597,7 +597,7 @@ ________________________________________________________________________________
 Let's cd into the pswinner directory. What message is on the warning label?
 
 ### **A2 - 'NetWars{ItsStillTooPowerful}'**
-```
+```bash
 PS /home> cd ./pswinner/
 PS /home/pswinner> dir
 
@@ -619,7 +619,7 @@ ________________________________________________________________________________
 As long as we're reading things, what's the value of the WallSign environment variable?
 
 ### **A3 - 'NetWars{Obelus}'**
-```
+```bash
 PS /home/pswinner> Get-ChildItem Env:WallSign           
 
 Name                           Value
@@ -641,7 +641,7 @@ In PowerShell, there's an easy way to generate a range of numbers. How could you
 
 
 ### **A4 - '1..255'**
-```
+```bash
 PS /home/pswinner> 1..255
 1
 2
@@ -669,7 +669,7 @@ Which of these options will add three numbers to $sum ?
 * (99,44,100)::$sum -Add
 
 ### **A5 - '(99,44,100) | %{$sum += $_}'**
-```
+```bash
 PS /home/pswinner> $sum = 1..255
 PS /home/pswinner> (99,44,100) | %{$sum += $_}
 PS /home/pswinner> $sum
@@ -694,7 +694,7 @@ What ag does `FizzyLiftingDrink.ps1` return when fed the right Passcode?
 
 
 ### **A6 - 'NetWars{IFeelTerriblyStrange}'**
-```
+```bash
 PS /home/pswinner> 1..99 | ForEach-Object $_ {./FizzyLiftingDrink.ps1 -Passcode $_}
 Sorry, this isn't the passcode we're looking for.
 Sorry, this isn't the passcode we're looking for.
@@ -713,7 +713,7 @@ PowerShell script in the `/usr/` directory that can help us?
 Find and execute a file ending in .ps1 .
 
 ### **A6.1 - 'NetWars{FromNowOnWeKeepOurFeetOnTheGround}'**
-```
+```bash
 PS /usr> Get-ChildItem -Path /usr/*.ps1 -Recurse -Force
     Directory: /usr/bin
 Mode                LastWriteTime         Length Name
@@ -747,7 +747,7 @@ an egg ischosen at random, sent through that port, and evaluated by the sorter.
 What TCP port are these processes using?
 
 ### **A1 - '44100'**
-```
+```bash
 root@oompa-loompa:~/eggsortingroom# ./egg-presenter 
 *** connecting to 127.0.0.1
 *** Testing b'Egg #694066' with hash b'\xa1\\\x9e\xa3\xc0l\xedwU\xf1K\xfc\xa1y\xe9\xd1?Y\xa8U'
@@ -764,7 +764,7 @@ What would happen if egg-presenter sent egg #89496? Please give the returned str
 Egg number 133007 is a good egg
 
 ### **A1.1 - ''**
-```
+```bash
 
 ```
 ________________________________________________________________________________________________________________________________________
@@ -781,7 +781,7 @@ Turn the incinerator off with a spoofed UDP packet
 Target: 127.0.0.127
 
 ### **A2 - ''**
-```
+```bash
 
 ```
 ________________________________________________________________________________________________________________________________________
@@ -793,7 +793,7 @@ across the network to see if they are detected.
 Can you find the message in `/home/mike/Desktop/Message1.pcapng` ?
 
 ### **A3 - 'NetWars{SometimesItsEasy}'**
-```
+```bash
 root@oompa-loompa:~/inventingroom# wireshark /home/mike/Desktop/Message1.pcapng
 
 Filter Wireshark by 'DNS' and then look for a Malformed Packet
@@ -808,7 +808,7 @@ However, this one won't be available as printable text in a console.
 Extract the file transferred between hosts to discover the flag.
 
 ### **A3.1 - ''**
-```
+```bash
 root@oompa-loompa:~/inventingroom# wireshark /home/mike/Desktop/Message2.pcapng 
 
 ```
@@ -821,7 +821,11 @@ what happened to it.
 What egg-named program file was running on the system at the time of the memory snapshot, `/home/contestwinner/eggsortingroom/OL4.raw` ?
 Answer in the form of `file.ext` .
 
-### **A4 - ''**
-```
+### **A4 - 'egg-shipping.exe'**
 
+```bash
+root@oompa-loompa:~/eggsortingroom# volatility -f /home/contestwinner/eggsortingroom/OL4.raw --profile=Win8SP1x64 filescan | grep "egg"
+Volatility Foundation Volatility Framework 2.5
+0x0000000019125490     13      0 R--r-d \Device\HarddiskVolume1\Users\veruca\Downloads\egg-shipping.exe
+root@oompa-loompa:~/eggsortingroom# 
 ```
