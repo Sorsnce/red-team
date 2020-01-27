@@ -857,3 +857,15 @@ The challenges in this room center around the
 `/home/contestwinner/televisionroom/` folder.
 
 ________________________________________________________________________________________________________________________________________
+## **Q1 - ODD IMAGE COMMENT**
+
+Someone found an odd artifact in the Television Room. It appears to be a .gif image file, but it seems incomplete. 
+Can you start by analyzing it in a hex editor?
+
+What 16-letter word appears at position 0x0390 in the file?
+
+### **A1 - ''**
+
+```bash
+root@oompa-loompa:~/televisionroom# 
+```
