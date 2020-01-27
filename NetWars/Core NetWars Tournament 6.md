@@ -829,3 +829,13 @@ Volatility Foundation Volatility Framework 2.5
 0x0000000019125490     13      0 R--r-d \Device\HarddiskVolume1\Users\veruca\Downloads\egg-shipping.exe
 root@oompa-loompa:~/eggsortingroom# 
 ```
+________________________________________________________________________________________________________________________________________
+## **Q4.1 - WHO'S AT THE HELM?**
+
+Who was logged in at the time of the snapshot? We're pretty sure the user had notepad.exe running, if that's helpful to know.
+
+### **A4.1 - ''**
+
+```bash
+root@oompa-loompa:~/eggsortingroom# 
+```
