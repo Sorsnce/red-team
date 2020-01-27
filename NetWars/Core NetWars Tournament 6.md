@@ -849,3 +849,11 @@ Any idea what the user has in that notepad.exe process?
 ```bash
 root@oompa-loompa:~/eggsortingroom# 
 ```
+________________________________________________________________________________________________________________________________________
+
+# Objective: WW - Television Room :star: :star:
+
+The challenges in this room center around the
+`/home/contestwinner/televisionroom/` folder.
+
+________________________________________________________________________________________________________________________________________
