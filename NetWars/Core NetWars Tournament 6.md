@@ -839,3 +839,13 @@ Who was logged in at the time of the snapshot? We're pretty sure the user had no
 ```bash
 root@oompa-loompa:~/eggsortingroom# 
 ```
+________________________________________________________________________________________________________________________________________
+## **Q4.2 - WHAT'S THE USER THINKING?**
+
+Any idea what the user has in that notepad.exe process?
+
+### **A4.2 - ''**
+
+```bash
+root@oompa-loompa:~/eggsortingroom# 
+```
