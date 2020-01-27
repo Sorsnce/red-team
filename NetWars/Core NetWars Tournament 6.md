@@ -864,8 +864,9 @@ Can you start by analyzing it in a hex editor?
 
 What 16-letter word appears at position 0x0390 in the file?
 
-### **A1 - ''**
+### **A1 - 'flibbertigibbets'**
 
 ```bash
-root@oompa-loompa:~/televisionroom# 
+Open file in a online hex editor i.e. https://hexed.it/
+Go to line 0x0390:
 ```
