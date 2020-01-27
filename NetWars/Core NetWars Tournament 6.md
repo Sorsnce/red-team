@@ -870,3 +870,24 @@ What 16-letter word appears at position 0x0390 in the file?
 Open file in a online hex editor i.e. https://hexed.it/
 Go to line 0x0390:
 ```
+________________________________________________________________________________________________________________________________________
+## **Q1.1 - ODD IMAGE PALETTE**
+
+Doesn't it seem strange that the lower half of the image is all white? There's got to be more information in this image.
+
+Use that brilliant mind of yours (and a hex editor) to correct what's off about this image and show a flag./
+
+### **A1.1 - 'NetWars{SimpleFileFormat}'**
+
+```bash
+Open file in a online hex editor i.e. https://hexed.it/
+
+Change the following lines to all zeros
+
+00000200                   00000000000000000000000000000000
+00000210                   00000000000000000000000000000000
+00000220                   00000000000000000000000000000000
+00000230                   00000000000000000000000000000000
+00000240                   00000000000000000000000000000000
+00000250                   00000000000000000000000000000000
+```
