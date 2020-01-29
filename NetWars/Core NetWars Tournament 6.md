@@ -936,3 +936,18 @@ Find the persistence flag that begins with s ...
 ```bash
 
 ```
+________________________________________________________________________________________________________________________________________
+## **Q5 - LOOMPALOOT, ON-TIME**
+
+Oh no! Those scoundrels at the TJ chocolate factory are mining LoompaLoot cryptocurrency right from under our feet! And goodness 
+are they good at persistence. For these four challenges, find the flags they've hidden with each persistence hook.
+
+**NOTE**: This scourge can be effectively defeated by disabling the miner software, but the flags are with the persistence mechanisms! 
+
+Find the persistence flag that begins with A ...
+
+### **A5 - ''**
+
+```bash
+
+```
