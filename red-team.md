@@ -90,6 +90,18 @@ joanna@openadmin:~$ find / -perm -u=s -type f 2>/dev/null
 joanna@openadmin:~$
 ```
 
+We can also look to see what access the `group` has. Sometimes the user might not have access to a specific directory but 
+the group that user is a member of has access to read and write those files;
+
+```
+jimmy@openadmin:~$ find / -group internal 2>/dev/null
+/var/www/internal
+/var/www/internal/main.php
+/var/www/internal/logout.php
+/var/www/internal/index.php
+jimmy@openadmin:~$
+```
+
 We can try and get a root shell if a service is running as root, i.e. apache. Start a python http server to transfer files to the 
 compromised machine. Note that this command will host files in your current directory, so make sure you copy all files before running
 the python SimpleHTTPServer.
