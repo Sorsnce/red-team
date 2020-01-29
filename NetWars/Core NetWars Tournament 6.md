@@ -875,7 +875,7 @@ ________________________________________________________________________________
 
 Doesn't it seem strange that the lower half of the image is all white? There's got to be more information in this image.
 
-Use that brilliant mind of yours (and a hex editor) to correct what's off about this image and show a flag./
+Use that brilliant mind of yours (and a hex editor) to correct what's off about this image and show a flag.
 
 ### **A1.1 - 'NetWars{SimpleFileFormat}'**
 
@@ -890,4 +890,19 @@ Change the following lines to all zeros
 00000230                   00000000000000000000000000000000
 00000240                   00000000000000000000000000000000
 00000250                   00000000000000000000000000000000
+```
+________________________________________________________________________________________________________________________________________
+## **Q2 - LOOMPALOOT, AS VIEWED FROM THE SIDE**
+
+Oh no! Those scoundrels at the TJ chocolate factory are mining LoompaLoot cryptocurrency right from under our feet! And goodness 
+are they good at persistence. For these four challenges, nd the ags they've hidden with each persistence hook.
+
+**NOTE**: This scourge can be effectively defeated by disabling the miner software, but the ags are with the persistence mechanisms! 
+
+Find the persistence flag that begins with W ...
+
+### **A2 - ''**
+
+```bash
+
 ```
