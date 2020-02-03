@@ -967,3 +967,21 @@ root@oompa-loompa:~/televisionroom# wireshark
 Use the following Wireshark filter
 ip.addr == 127.127.127.127 and dns
 ```
+________________________________________________________________________________________________________________________________________
+## **Q6.1 - CROUCHING TIGER, HIDDEN DNS QUERY**
+
+There's something funny about those DNS requests. Is there a secret message in there for us?
+
+### **A6.1 - 'NetWars{AsymptoticLineExtendedOutward}'**
+
+```bash
+root@oompa-loompa:~/televisionroom# wireshark
+
+Use the following Wireshark filter
+ip.addr == 127.127.127.127 and dns
+
+Let the wireshark capture run for about 60 seconds. Now right click any packet and select follow>UDP Stream
+copy the entire output and paste in https://www.base64decode.org/ You should see a paragraph text with some 
+ASCII characters you will see this flag.
+said NetWars{AsymptoticLineExtendedOutward}
+```
