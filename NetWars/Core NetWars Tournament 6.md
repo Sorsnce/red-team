@@ -959,8 +959,11 @@ for 127.127.127.127, but there's no name server in that room.
 
 What IP address are those requests coming from?
 
-### **A6 - ''**
+### **A6 - '127.87.84.86'**
 
 ```bash
+root@oompa-loompa:~/televisionroom# wireshark
 
+Use the following Wireshark filter
+ip.addr == 127.127.127.127 and dns
 ```
