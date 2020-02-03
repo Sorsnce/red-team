@@ -951,3 +951,16 @@ Find the persistence flag that begins with A ...
 ```bash
 
 ```
+________________________________________________________________________________________________________________________________________
+## **Q6 - CROUCHING TIGER, HIDDEN DNS QUERY**
+
+Our technicians have picked up something odd in the Television Room. There seem to be DNS A record requests coming in 
+for 127.127.127.127, but there's no name server in that room.
+
+What IP address are those requests coming from?
+
+### **A6 - ''**
+
+```bash
+
+```
