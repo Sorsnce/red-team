@@ -967,7 +967,7 @@ root@oompa-loompa:~/televisionroom# wireshark
 Use the following Wireshark filter
 ip.addr == 127.127.127.127 and dns
 ```
-________________________________________________________________________________________________________________________________________
+_______________________________________________________________________________________________________________________________________
 ## **Q6.1 - CROUCHING TIGER, HIDDEN DNS QUERY**
 
 There's something funny about those DNS requests. Is there a secret message in there for us?
@@ -984,4 +984,20 @@ Let the wireshark capture run for about 60 seconds. Now right click any packet a
 copy the entire output and paste in https://www.base64decode.org/ You should see a paragraph text with some 
 ASCII characters you will see this flag.
 said NetWars{AsymptoticLineExtendedOutward}
+```
+________________________________________________________________________________________________________________________________________
+## **Q7 - WONKAVISION DESCRAMBLE 1**
+
+Would you mind helping us with our Wonkavision Descrambler? You can access it by activating its docker container, tagged as `wvds` . 
+The container has a web server listening on TCP port 4141. Start the container in such a way that you can access that web server, 
+then access it in a browser to obtain the flag.
+
+### **A7 - 'NetWars{WarmingUpTheTVMachine}'**
+
+```bash
+root@oompa-loompa:~/televisionroom# docker run -p 1234:4141 wvds
+== Sinatra (v2.0.5) has taken the stage on 4141 for development with backup from Thin
+
+now open a web browser and go to http://127.0.0.1:1234/
+Select "Click here to practice!"
 ```
