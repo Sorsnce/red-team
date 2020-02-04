@@ -1001,3 +1001,20 @@ root@oompa-loompa:~/televisionroom# docker run -p 1234:4141 wvds
 now open a web browser and go to http://127.0.0.1:1234/
 Select "Click here to practice!"
 ```
+________________________________________________________________________________________________________________________________________
+## **Q7.1 - WONKAVISION DESCRAMBLE 1**
+
+Click pieces of the JSON statement on the left so that they appear in the correct order on the right. 
+What flag is returned when you are successful?
+
+### **A7.1 - 'NetWars{CompletedATVChallenge}'**
+
+```bash
+Select in this order:
+1. {"object":"Bar",
+2. "flavor":"Chocol
+3. ate","size":"Nor
+4. mal"}
+
+And Select "Continue"
+```
