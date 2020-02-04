@@ -1063,3 +1063,14 @@ Select in this order:
 
 And Select "Continue"
 ```
+________________________________________________________________________________________________________________________________________
+## **Q7.4 - WONKAVISION DESCRAMBLE 5**
+
+Click encrypted pieces of the `JSON` statement on the left so that they appear in the correct order on the right. What flag is 
+returned when you are successful?
+
+### **A7.4 - ''**
+
+```bash
+
+```
