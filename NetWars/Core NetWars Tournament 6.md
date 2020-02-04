@@ -1002,7 +1002,7 @@ now open a web browser and go to http://127.0.0.1:1234/
 Select "Click here to practice!"
 ```
 ________________________________________________________________________________________________________________________________________
-## **Q7.1 - WONKAVISION DESCRAMBLE 1**
+## **Q7.1 - WONKAVISION DESCRAMBLE 2**
 
 Click pieces of the JSON statement on the left so that they appear in the correct order on the right. 
 What flag is returned when you are successful?
@@ -1017,4 +1017,36 @@ Select in this order:
 4. mal"}
 
 And Select "Continue"
+```
+________________________________________________________________________________________________________________________________________
+## **Q7.2 - WONKAVISION DESCRAMBLE 3**
+
+Click encrypted pieces of the JSON statement on the left so that they appear in the correct order on the right. What flag is 
+returned when you are successful?
+
+### **A7.2 - 'NetWars{ChocolateBarHasLanded}'**
+
+```bash
+The hashes below will change:
+
+Select in this order:
+1. f2b8c6e7087746e3
+2. a38eead590baa825
+3. 2a3bfc435660183a
+4. 12e2f26d5e1259a2
+5. 3b55138d013d4ed6
+
+And Select "Continue"
+```
+
+________________________________________________________________________________________________________________________________________
+## **Q7.3 - WONKAVISION DESCRAMBLE 4**
+
+Click encrypted pieces of the JSON statement on the left so that they appear in the correct order on the right. What flag is 
+returned when you are successful?
+
+### **A7.3 - ''**
+
+```bash
+Input your name in the field and select "Fire up the transporter!"
 ```
