@@ -1004,7 +1004,7 @@ Select "Click here to practice!"
 ________________________________________________________________________________________________________________________________________
 ## **Q7.1 - WONKAVISION DESCRAMBLE 2**
 
-Click pieces of the JSON statement on the left so that they appear in the correct order on the right. 
+Click pieces of the `JSON` statement on the left so that they appear in the correct order on the right. 
 What flag is returned when you are successful?
 
 ### **A7.1 - 'NetWars{CompletedATVChallenge}'**
@@ -1021,7 +1021,7 @@ And Select "Continue"
 ________________________________________________________________________________________________________________________________________
 ## **Q7.2 - WONKAVISION DESCRAMBLE 3**
 
-Click encrypted pieces of the JSON statement on the left so that they appear in the correct order on the right. What flag is 
+Click encrypted pieces of the `JSON` statement on the left so that they appear in the correct order on the right. What flag is 
 returned when you are successful?
 
 ### **A7.2 - 'NetWars{ChocolateBarHasLanded}'**
@@ -1042,11 +1042,24 @@ And Select "Continue"
 ________________________________________________________________________________________________________________________________________
 ## **Q7.3 - WONKAVISION DESCRAMBLE 4**
 
-Click encrypted pieces of the JSON statement on the left so that they appear in the correct order on the right. What flag is 
+Click encrypted pieces of the `JSON` statement on the left so that they appear in the correct order on the right. What flag is 
 returned when you are successful?
 
-### **A7.3 - ''**
+### **A7.3 - 'NetWars{IsThisEvenLegal}'**
 
 ```bash
 Input your name in the field and select "Fire up the transporter!"
+
+Now open up devolper tools via "F12"
+We will want to go to the element that contains 'ht":10}' and change it to 'ht":58}'
+
+Select in this order:
+1. {"object":"Trae
+2. e", "name":"Mike
+3.  Teavee", "occupa
+4. tion":"Televisio
+5. n Fanatic", "heig
+6. ht":58}
+
+And Select "Continue"
 ```
