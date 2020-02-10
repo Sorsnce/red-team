@@ -1074,3 +1074,12 @@ returned when you are successful?
 ```bash
 
 ```
+________________________________________________________________________________________________________________________________________
+
+# Objective: WW - Great Glass Elevator :star: :star:
+
+Before proceeding, please engage the Wonkavator using the
+engage-wonkavator command with the following credentials:
+Username: `sorsnce`
+Password: `<password>`
+
