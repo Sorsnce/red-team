@@ -1094,5 +1094,22 @@ system's IP addresses. There are only three live systems on the **10.3.1.0/24** 
 ### **A1 - ''**
 
 ```bash
-root@oompa-loompa:~/televisionroom# nmap 10.3.1.0/24
+root@oompa-loompa:~/televisionroom# nmap -sP 10.3.1.0/24
 ```
+________________________________________________________________________________________________________________________________________
+
+# Objective: TJ - Another Golden Ticket?? :star: :star: :star:
+
+A Golden Ticket contest? How dare they?! Clearly, this needs to be dealt with immediately.
+
+They think they can license our candy-making technology and then steal LoompaLoot from us? 
+No Sir! Section 37-C gives us permission to do any manner of penetration testing on their systems - including DoS conditions. 
+Well, my child - now is the time! Use the tools you have to surmount their defenses!
+
+To aid in your efforts, I'll be sending along the other children you met earlier. Don't worry though; 
+you are the main effort in this operation. May the others serve as some kind of diversion... The other candymakers? Slugworth, 
+Prodnose, Fickelgruber, and others may be about as well. Some seem to have aligned themselves with this TJ consortium, 
+but their true intentions can't be known just yet.
+
+**NOTE:** We don't want anyone else dealing the nal death blow, so be somewhat cautious when circumventing defenses like rewalls. 
+Make a hole just wide enough to get yourself through and no one else. And do all you can to ensure they end up with NOTHING!
