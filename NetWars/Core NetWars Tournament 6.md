@@ -1081,5 +1081,18 @@ ________________________________________________________________________________
 Before proceeding, please engage the Wonkavator using the
 engage-wonkavator command with the following credentials:
 Username: `sorsnce`
+
 Password: `<password>`
 
+________________________________________________________________________________________________________________________________________
+## **Q1 - RIDE THE WONKAVATOR**
+
+It's time for the next step of your adventure, my child! Now that this factory is yours, you need to travel to another. 
+Use the Great Glass Elevator. Engage it by running **engage-wonkavator** , and then tell me one of the elevator control 
+system's IP addresses. There are only three live systems on the **10.3.1.0/24** network; please specify the lowest-numbered system.
+
+### **A1 - ''**
+
+```bash
+root@oompa-loompa:~/televisionroom# nmap 10.3.1.0/24
+```
