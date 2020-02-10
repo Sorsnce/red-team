@@ -1113,3 +1113,18 @@ but their true intentions can't be known just yet.
 
 **NOTE:** We don't want anyone else dealing the nal death blow, so be somewhat cautious when circumventing defenses like rewalls. 
 Make a hole just wide enough to get yourself through and no one else. And do all you can to ensure they end up with NOTHING!
+
+```
+ _/\/\/\/\/\/\__________/\/\_
+ _____/\/\______________/\/\_
+ _____/\/\______________/\/\_
+ _____/\/\______/\/\____/\/\_
+ _____/\/\________/\/\/\/\___
+____________________________
+We, the fine chocolate purveyors at TJ, greet you very warmly! We shake you by the hand and such! Unlike other,
+more secretive candy makers, we happily give daily tours. Please, feel free to look around, and enjoy yourselves
+here. We're sure you'll find our hygiene practices more than sufficient, our technology advanced, and our candies
+of the highest qualities. Indeed, we do our best to absorb best practices wherever we can find them!
+-Signed,
+-T & J
+```
