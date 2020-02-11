@@ -1153,3 +1153,10 @@ As long as we have access to the system, let's see if there's anything else we c
 ```bash
 
 ```
+________________________________________________________________________________________________________________________________________
+
+# Objective: TJ - Chocolate Room :star: :star: :star:
+
+Oh, TJ's has their own Chocolate Room too. I'll bet theirs has mice. You see, the secret to keeping mice 
+out is in having cat-shaped mouse holes in the mop boards. Take a good look around, and don't let on that 
+you're with us. I believe in you, my child!
