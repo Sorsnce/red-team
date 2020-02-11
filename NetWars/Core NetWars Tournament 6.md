@@ -1142,3 +1142,14 @@ Target: 10.3.3.41
 ```bash
 
 ```
+
+________________________________________________________________________________________________________________________________________
+## **Q1.1 - PROBING AROUND**
+
+As long as we have access to the system, let's see if there's anything else we can pilfer. Can you find any credentials on this system?
+
+### **A1.1 - ''**
+
+```bash
+
+```
