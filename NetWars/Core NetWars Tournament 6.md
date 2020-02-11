@@ -1128,3 +1128,17 @@ of the highest qualities. Indeed, we do our best to absorb best practices wherev
 -Signed,
 -T & J
 ```
+
+________________________________________________________________________________________________________________________________________
+## **Q1 - HERE'S YOUR PLUG-IN**
+
+The web server they're using to run their illicit Golden Ticket program must have a flaw - `10.3.3.41` . Investigate, 
+gain access to the system, and let us know what you finnd in the file located at `/plans.txt` .
+
+Target: 10.3.3.41
+
+### **A1 - ''**
+
+```bash
+
+```
