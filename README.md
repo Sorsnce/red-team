@@ -35,4 +35,3 @@ Metasploit >= 5.0.46
 
 * **Trae Horton** - *Initial work* - [exploits](https://github.com/Sorsnce/red-team)
 
-e
