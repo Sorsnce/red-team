@@ -105,8 +105,13 @@ jimmy@openadmin:~$
 We can try and get a root shell if a service is running as root, i.e. apache. Start a python http server to transfer files to the 
 compromised machine. Note that this command will host files in your current directory, so make sure you copy all files before running
 the python SimpleHTTPServer.
-```
+#### Python 2.7
+```bash
 $ sudo python -m SimpleHTTPServer 8888
+```
+#### Python 3
+```bash
+$ sudo python -m http.server 8888
 ```
 # Meterpreter
 Use the following to created a meterpreter shell for reverse_tcp for Windows
